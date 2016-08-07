@@ -1,0 +1,80 @@
+
+html {
+    overflow-y: hidden; /*To eliminate double scrollbar*/
+    font-size: 100%;
+}
+
+
+/*TOC two columns*/
+#leftsidebar {
+    float:left;    
+    height: 100%;
+    overflow: auto;
+    resize: horizontal;
+    width: 250px;
+    padding-right:1em;
+    padding-top:3em;
+    border-right:solid;
+    
+/*    border:solid;*/
+/*    border-color: red;*/
+} 
+
+.hindex1, .hindex2, .hindex3, .hindex4, .hindex5 {
+    margin-left: 0.75em;
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(200, 200, 200);
+    text-decoration: none;    
+}
+
+.hindex3, .hindex4, .hindex5 {
+    font-size: 90%;
+}
+
+#contentwrapper {
+    height: 100%;
+    overflow:auto;
+/*    border:solid;*/
+/*    border-color: cadetblue;*/
+        
+}
+
+#rightcontent {
+    height: 100%;
+    /* overflow:auto; */
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    margin: auto;
+    max-width: 800px;
+    /*    border:solid;*/
+    /*    border-color: blue;*/
+}
+
+.capshidden{
+    display: none;
+}
+
+.figure {
+    padding: 1em;
+}
+
+.figure p {
+    text-align: center;
+}
+
+.figure-number {
+    font-weight: bold;
+}
+
+#UserGuide pre {
+    overflow-y:hidden;    
+}
+
+pre.block {
+    background-color: #ececec;
+    border: 1px dotted gray;
+    padding-left: 1em;
+    padding-right: 1em;
+}

@@ -1,0 +1,19 @@
+
+module BigMax
+
+	use import int.Int
+	(*use import int.MinMax*)
+	use HighOrd as HO
+
+	use import capsUtil.CapsUtil as CapsUtil	
+	
+	constant bigMax: (int -> bool) -> (int -> int) -> int
+
+	function max(x y: int): int = if (x > y) then x else y
+	
+	axiom onePointMax:
+		forall r: int -> bool, t: int -> int, x: int.
+			one_point r x -> 
+				bigMax r t = t x 
+				
+end

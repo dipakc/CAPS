@@ -1,0 +1,34 @@
+
+module BigTimes
+
+	use import int.Int
+	(*use import int.MinMax*)
+	use HighOrd as HO
+	use import capsUtil.CapsUtil as CapsUtil
+	
+	constant bigTimes: (int -> bool) -> (int -> int) -> int
+		
+	axiom onePoint:
+		forall r: int -> bool, t: int -> int, x: int.
+			one_point r x -> 
+				bigTimes r t = t x 
+		
+	axiom emptyRange:
+		forall r: int -> bool, t: int -> int.
+			empty_range r -> 
+				bigTimes r t = 1 
+
+	axiom splitRange:
+		forall r r1 r2: int -> bool, t t1 t2: int -> int.
+			(*non_empty_range r -> non_empty_range r1 -> non_empty_range r2 ->*)
+			is_union_of r r1 r2 ->  disjoint r1 r2 ->
+			are_same t t1 -> are_same t t2 ->
+				bigTimes r t = (bigTimes r1 t1) * (bigTimes r2 t2)
+
+	axiom splitRangeRight:
+		forall r r1: int -> bool, t t1 t2: int -> int, v: int.
+			is_union_of_v r r1 v /\ not(r1 v)->
+			are_same t t1 -> are_same t t2 ->
+				bigTimes r t = (bigTimes r1 t1) * (t2 v)
+				
+end

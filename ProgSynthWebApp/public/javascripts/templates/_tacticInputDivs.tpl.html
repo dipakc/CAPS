@@ -1,0 +1,107 @@
+<!-- Handle bar templates. 
+Enclose each template in div.#<templateName>.template tag
+templateMgr loads this file as text AMD module. 
+Add corresponding function in templateMgr.ts
+-->
+
+<div class='template' id='newVarView'>
+	<div class="NewVarTV">
+        <div>{{varName}} :</div>
+        {{varTypeView}}
+	</div>
+</div>
+
+<div class='template' id='enumView'>
+	<div class="EnumTV">
+		<select class="enumCombo"> 
+            <option value="" disabled selected>Choose ...</option>
+            {{#elements}}  
+            <option value="{{.}}">{{.}}</option>
+            {{/elements}}
+		</select>
+	</div>
+</div>
+
+<div class='template' id='abstractVal'>
+	<div class="AbstractVal">
+        <div class='absValueName'>{{absTVName}}: </div>
+		<div>
+			<select class="inputPanelTVCombo"> 
+				<option value="" disabled selected>Choose ...</option>
+				{{#subTVs}}
+					<option value="{{.}}">{{.}}</option>
+				{{/subTVs}} 
+			</select>
+		</div>
+        <div class="selectedSubTV">{{{concreteDiv}}}</div>
+	</div>
+</div>
+
+<div class='template' id='primitiveVal'>
+	<div class="PrimitiveVal" typeName={{typeName}}>
+		{{#if isMathQuillType}}
+			<span class="mathquill-editable"></span>
+		{{else}}
+			<input name="data"/>
+		{{/if}}
+	</div>
+</div>
+
+ 
+ <div class='template' id='compositeVal'>
+	<div class="CompositeVal" type="{{typeName}}">
+		{{{fieldTypeDivs}}}
+	</div>
+</div>
+ 
+
+<div class='template' id='fieldVal'>
+    <tr>
+	    <td class="FieldVal" ftype="{{ftype}}"> {{fname}} </td> 
+	    <td> = </td> 
+	    <td class="fval"> <div class="placeholder fieldTypeDiv"></div> </td>
+    </tr>
+</div>
+
+
+<div class='template' id='inputForm'>
+   <form action=''>
+      <div class="placeholder inputUI"></div>
+      <div class='button' id='applyTacticBtn'>Apply</div>
+   </form>
+</div>
+
+
+<div class='template' id='listVal'>
+	<div class='ListVal' type='List'> 
+		<div class='listItem'> {{{paramDiv}}} </div>
+	    <div class='listItem'> {{{paramDiv}}} </div>
+	    <div class='listItem'> {{{paramDiv}}} </div>
+	    <div class='listItem'> {{{paramDiv}}} </div>
+	</div>
+</div>
+
+<div class='template' id='tupleVal'>
+	<div class='TupleVal' type='Tuple'>
+		{{#each itemContentDivs}} 
+		<div class='tupleItem'> {{{this}}} </div>
+		{{/each}}
+	</div>
+</div>
+
+<div class='template' id='siblingsView'>
+    <div class="siblingitem"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+

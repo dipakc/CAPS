@@ -1,0 +1,10 @@
+{
+	"toFile" : [
+		{"from": "/assets/(.+\\.js)", "to": "/$1"},
+		{"from": "/assets/(.+\\.css)", "to": "/$1"},
+		{"from": "/assets/(.+\\.html)", "to": "/$1"},
+		{"from": "/assets/(.+\\.ts)", "to": "/$1"},
+		{"from": "/assets/(.+\\.js.map)", "to": "/$1"}		
+	]
+}
+

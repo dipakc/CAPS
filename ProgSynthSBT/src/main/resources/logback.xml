@@ -1,0 +1,27 @@
+<!-- Used during test cases for the ProgSynth project -->
+<configuration>
+  <!-- Appenders -->
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%logger{15} - %message%n%xException{5}</pattern>
+    </encoder>
+  </appender>
+
+  <appender name="PROGSYNTH_PRJ_LOG" class="ch.qos.logback.core.FileAppender">
+  	<file>logs/progsynth.txt</file>
+    <encoder>
+      <pattern>%logger %level %date ::: %msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <!-- Loggers -->
+  <root level="TRACE">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+  <!-- additivity="false" -->
+  <logger name="progsynth" level="TRACE">
+  	<appender-ref ref="PROGSYNTH_PRJ_LOG" />
+  </logger>
+
+</configuration>

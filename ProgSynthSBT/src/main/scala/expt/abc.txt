@@ -1,0 +1,219 @@
+List(PackageDef(
+  Ident("localhost") // sym=package localhost, sym.owner=package <root>, sym.tpe=package localhost, tpe=localhost.type, tpe.sym=package localhost, tpe.sym.owner=package <root>
+,
+
+  ClassDef( // sym=object MaxObject, sym.owner=package localhost, sym.tpe=object localhost.MaxObject, tpe=<notype>, tpe.sym=<none>
+	al <module>, // flags=final <module>, annots=List()
+	"MaxObject",
+	List(), // no type parameter
+	Template( // sym=value <local MaxObject>, sym.owner=object MaxObject, sym.tpe=<notype>, tpe=object localhost.MaxObject, tpe.sym=object MaxObject, tpe.sym.owner=package localhost
+	  List(class Object, trait ScalaObject), // parents
+	  ValDef( // sym=<none>, sym.tpe=<notype>, tpe=<notype>, tpe.sym=<none>
+		0, // flags=, annots=List()
+		"_",
+		TypeTree(), // sym=<none>, tpe=<notype>, tpe.sym=<none>,
+		EmptyTree
+	  ),
+	  List( // body
+		DefDef( // sym=constructor MaxObject, isPrimaryConstructor, sym.owner=object MaxObject, sym.tpe=()object localhost.MaxObject, tpe=<notype>, tpe.sym=<none>
+		  thod>, // flags=<method>, annots=List()
+		  "<init>",
+		  List(), // no type parameter
+		  List(List()), // no parameter
+		  object localhost.MaxObject,
+		  Block( // sym=null, tpe=Unit, tpe.sym=class Unit, tpe.sym.owner=package scala
+			List( // 1 statement(s)
+			  Apply( // sym=constructor Object, tpe=java.lang.Object, tpe.sym=class Object, tpe.sym.owner=package lang
+				Select( // sym=constructor Object, isPrimaryConstructor, sym.owner=class Object, sym.tpe=()java.lang.Object, tpe=()java.lang.Object, tpe.sym=<none>
+				  Super("") // sym=object MaxObject, tpe=localhost.MaxObject.type, tpe.sym=object MaxObject, tpe.sym.owner=package localhost
+					This(""), // sym=object MaxObject, sym.owner=package localhost, sym.tpe=object localhost.MaxObject, tpe=localhost.MaxObject.type, tpe.sym=object MaxObject, tpe.sym.owner=package localhost, tpe.decls=List(constructor MaxObject: ()object localhost.MaxObject, , method getMax: (x: Int)Int, )
+				  "<init>"),
+				Nil // no argument
+			  )
+			),
+			Literal(Constant(()))
+		  )
+		),
+		DefDef( // sym=method getMax, sym.owner=object MaxObject, sym.tpe=(x: Int)Int, tpe=<notype>, tpe.sym=<none>
+		  thod>, // flags=<method>, annots=List()
+		  "getMax",
+		  List(), // no type parameter
+		  List(
+			List( // 1 parameter(s)
+			  ValDef( // sym=value x, sym.owner=method getMax, sym.tpe=Int, tpe=<notype>, tpe.sym=<none>
+				ram>, // flags=<param>, annots=List()
+				"x",
+				TypeTree(), // sym=class Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala,
+				EmptyTree
+			  )
+			)
+		  ),
+		  Int,
+		  Apply( // sym=method sEnsuring, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+			Select( // sym=method sEnsuring, sym.owner=class Ensuring, sym.tpe=(fun: A => localhost.ProgramTypes.FOLFormula)A, tpe=(fun: Int => localhost.ProgramTypes.FOLFormula)Int, tpe.sym=<none>
+			  Apply( // sym=method any2Ensuring, tpe=localhost.StaticAssertions.Ensuring[Int], tpe.sym=class Ensuring, tpe.sym.owner=object StaticAssertions, tpe.decls=List(value x: => A, , value x: A, , constructor Ensuring: (x: A)localhost.StaticAssertions.Ensuring[A], , method sEnsuring: (fun: A => localhost.ProgramTypes.FOLFormula)A, )
+				TypeApply( // sym=method any2Ensuring, tpe=(x: Int)localhost.StaticAssertions.Ensuring[Int], tpe.sym=<none>
+				  Select( // sym=method any2Ensuring, sym.owner=object StaticAssertions, sym.tpe=[A](x: A)localhost.StaticAssertions.Ensuring[A], tpe=[A](x: A)localhost.StaticAssertions.Ensuring[A], tpe.sym=<none>
+					Select( // sym=object StaticAssertions, sym.owner=package localhost, sym.tpe=object localhost.StaticAssertions, tpe=localhost.StaticAssertions.type, tpe.sym=object StaticAssertions, tpe.sym.owner=package localhost, tpe.decls=List(constructor StaticAssertions: ()object localhost.StaticAssertions, , method sAssert: (assertion: localhost.ProgramTypes.FOLFormula)Unit, , method sAssertLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequire: (requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequireLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , class Ensuring: localhost.StaticAssertions.Ensuring[A], , method any2Ensuring: [A](x: A)localhost.StaticAssertions.Ensuring[A], )
+					  This("localhost"), // sym=package localhost, sym.owner=package <root>, sym.tpe=package localhost, tpe=localhost.type, tpe.sym=package localhost, tpe.sym.owner=package <root>
+					  "StaticAssertions"),
+					"any2Ensuring"),
+				  List(
+				  TypeTree() // sym=class Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+				  )
+				),
+				List( // 1 arguments(s)
+				  Block( // sym=null, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+					List( // 5 statement(s)
+					  Apply( // sym=method sRequire, tpe=Unit, tpe.sym=class Unit, tpe.sym.owner=package scala
+						Select( // sym=method sRequire, sym.owner=object StaticAssertions, sym.tpe=(requirement: localhost.ProgramTypes.FOLFormula)Unit, tpe=(requirement: localhost.ProgramTypes.FOLFormula)Unit, tpe.sym=<none>
+						  Ident("StaticAssertions"), // sym=object StaticAssertions, sym.owner=package localhost, sym.tpe=object localhost.StaticAssertions, tpe=localhost.StaticAssertions.type, tpe.sym=object StaticAssertions, tpe.sym.owner=package localhost, tpe.decls=List(constructor StaticAssertions: ()object localhost.StaticAssertions, , method sAssert: (assertion: localhost.ProgramTypes.FOLFormula)Unit, , method sAssertLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequire: (requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequireLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , class Ensuring: localhost.StaticAssertions.Ensuring[A], , method any2Ensuring: [A](x: A)localhost.StaticAssertions.Ensuring[A], ),
+						  "sRequire"),
+						List( // 1 arguments(s)
+						  Apply( // sym=constructor True, tpe=localhost.True[localhost.Pred], tpe.sym=class True, tpe.sym.owner=package localhost, tpe.decls=List(constructor True: ()localhost.True[T], , method hashCode: ()Int, , method toString: ()String, , method equals: (x$1: Any)Boolean, , method productPrefix: => java.lang.String, , method productArity: => Int, , method productElement: (x$1: Int)Any, , method canEqual: (x$1: Any)Boolean, )
+							Select( // sym=constructor True, isPrimaryConstructor, sym.owner=class True, sym.tpe=()localhost.True[T], tpe=()localhost.True[localhost.Pred], tpe.sym=<none>
+							  New( // sym=null, tpe=localhost.True[localhost.Pred], tpe.sym=class True, tpe.sym.owner=package localhost, tpe.decls=List(constructor True: ()localhost.True[T], , method hashCode: ()Int, , method toString: ()String, , method equals: (x$1: Any)Boolean, , method productPrefix: => java.lang.String, , method productArity: => Int, , method productElement: (x$1: Int)Any, , method canEqual: (x$1: Any)Boolean, )
+								TypeTree() // sym=class True, tpe=localhost.True[localhost.Pred], tpe.sym=class True, tpe.sym.owner=package localhost, tpe.decls=List(constructor True: ()localhost.True[T], , method hashCode: ()Int, , method toString: ()String, , method equals: (x$1: Any)Boolean, , method productPrefix: => java.lang.String, , method productArity: => Int, , method productElement: (x$1: Int)Any, , method canEqual: (x$1: Any)Boolean, )
+							  ),
+							  "<init>"),
+							Nil // no argument
+						  )
+						)
+					  ),
+					  ValDef( // sym=variable y, sym.owner=method getMax, sym.tpe=Int, tpe=<notype>, tpe.sym=<none>
+						table>, // flags=<mutable>, annots=List()
+						"y",
+						TypeTree(), // sym=class Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala,
+						Ident("x") // sym=value x, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+					  ),
+					  Apply( // sym=method sAssertLoc, tpe=Unit, tpe.sym=class Unit, tpe.sym.owner=package scala
+						Apply( // sym=method sAssertLoc, tpe=(requirement: localhost.ProgramTypes.FOLFormula)Unit, tpe.sym=<none>
+						  Select( // sym=method sAssertLoc, sym.owner=object StaticAssertions, sym.tpe=(loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, tpe=(loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, tpe.sym=<none>
+							Ident("StaticAssertions"), // sym=object StaticAssertions, sym.owner=package localhost, sym.tpe=object localhost.StaticAssertions, tpe=localhost.StaticAssertions.type, tpe.sym=object StaticAssertions, tpe.sym.owner=package localhost, tpe.decls=List(constructor StaticAssertions: ()object localhost.StaticAssertions, , method sAssert: (assertion: localhost.ProgramTypes.FOLFormula)Unit, , method sAssertLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequire: (requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequireLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , class Ensuring: localhost.StaticAssertions.Ensuring[A], , method any2Ensuring: [A](x: A)localhost.StaticAssertions.Ensuring[A], ),
+							"sAssertLoc"),
+						  List( // 1 arguments(s)
+							Literal(Constant(1))
+						  )
+						),
+						List( // 1 arguments(s)
+						  Apply( // sym=method Boolean2Atom, tpe=localhost.Atom[localhost.Pred], tpe.sym=class Atom, tpe.sym.owner=package localhost, tpe.decls=List(value a: => T, , value a: T, , constructor Atom: (a: T)localhost.Atom[T], , method copy: [T](a: T)localhost.Atom[T], , method copy$default$1: [T]=> T @scala.annotation.unchecked.uncheckedVariance, , method hashCode: ()Int, , method toString: ()String, , method equals: (x$1: Any)Boolean, , method productPrefix: => java.lang.String, , method productArity: => Int, , method productElement: (x$1: Int)Any, , method canEqual: (x$1: Any)Boolean, )
+							Select( // sym=method Boolean2Atom, sym.owner=object FormulaUtils, sym.tpe=(b: Boolean)localhost.Atom[localhost.Pred], tpe=(b: Boolean)localhost.Atom[localhost.Pred], tpe.sym=<none>
+							  Select( // sym=object FormulaUtils, sym.owner=package localhost, sym.tpe=object localhost.FormulaUtils, tpe=localhost.FormulaUtils.type, tpe.sym=object FormulaUtils, tpe.sym.owner=package localhost, tpe.decls=List(constructor FormulaUtils: ()object localhost.FormulaUtils, , method String2Var: (str: String)localhost.Var, , method Boolean2Atom: (b: Boolean)localhost.Atom[localhost.Pred], , method not: (a: localhost.Formula[localhost.Pred])localhost.Not[localhost.Pred], , method varat: [T](variable: T, loc: Int)T, )
+								This("localhost"), // sym=package localhost, sym.owner=package <root>, sym.tpe=package localhost, tpe=localhost.type, tpe.sym=package localhost, tpe.sym.owner=package <root>
+								"FormulaUtils"),
+							  "Boolean2Atom"),
+							List( // 1 arguments(s)
+							  Apply( // sym=method ==, tpe=Boolean, tpe.sym=class Boolean, tpe.sym.owner=package scala
+								Select( // sym=method ==, sym.owner=class Int, sym.tpe=(x: Int)Boolean, tpe=(x: Int)Boolean, tpe.sym=<none>
+								  Ident("y"), // sym=variable y, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala,
+								  "$eq$eq"),
+								List( // 1 arguments(s)
+								  Ident("x") // sym=value x, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+								)
+							  )
+							)
+						  )
+						)
+					  ),
+					  Assign(
+						Ident("y") // sym=variable y, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+						Apply( // sym=method +, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+						  Select( // sym=method +, sym.owner=class Int, sym.tpe=(x: Int)Int, tpe=(x: Int)Int, tpe.sym=<none>
+							Ident("y"), // sym=variable y, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala,
+							"$plus"),
+						  List( // 1 arguments(s)
+							Literal(Constant(2))
+						  )
+						)
+					  ),
+					  Apply( // sym=method sAssert, tpe=Unit, tpe.sym=class Unit, tpe.sym.owner=package scala
+						Select( // sym=method sAssert, sym.owner=object StaticAssertions, sym.tpe=(assertion: localhost.ProgramTypes.FOLFormula)Unit, tpe=(assertion: localhost.ProgramTypes.FOLFormula)Unit, tpe.sym=<none>
+						  Ident("StaticAssertions"), // sym=object StaticAssertions, sym.owner=package localhost, sym.tpe=object localhost.StaticAssertions, tpe=localhost.StaticAssertions.type, tpe.sym=object StaticAssertions, tpe.sym.owner=package localhost, tpe.decls=List(constructor StaticAssertions: ()object localhost.StaticAssertions, , method sAssert: (assertion: localhost.ProgramTypes.FOLFormula)Unit, , method sAssertLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequire: (requirement: localhost.ProgramTypes.FOLFormula)Unit, , method sRequireLoc: (loc: Int)(requirement: localhost.ProgramTypes.FOLFormula)Unit, , class Ensuring: localhost.StaticAssertions.Ensuring[A], , method any2Ensuring: [A](x: A)localhost.StaticAssertions.Ensuring[A], ),
+						  "sAssert"),
+						List( // 1 arguments(s)
+						  Apply( // sym=method Boolean2Atom, tpe=localhost.Atom[localhost.Pred], tpe.sym=class Atom, tpe.sym.owner=package localhost, tpe.decls=List(value a: => T, , value a: T, , constructor Atom: (a: T)localhost.Atom[T], , method copy: [T](a: T)localhost.Atom[T], , method copy$default$1: [T]=> T @scala.annotation.unchecked.uncheckedVariance, , method hashCode: ()Int, , method toString: ()String, , method equals: (x$1: Any)Boolean, , method productPrefix: => java.lang.String, , method productArity: => Int, , method productElement: (x$1: Int)Any, , method canEqual: (x$1: Any)Boolean, )
+							Select( // sym=method Boolean2Atom, sym.owner=object FormulaUtils, sym.tpe=(b: Boolean)localhost.Atom[localhost.Pred], tpe=(b: Boolean)localhost.Atom[localhost.Pred], tpe.sym=<none>
+							  Select( // sym=object FormulaUtils, sym.owner=package localhost, sym.tpe=object localhost.FormulaUtils, tpe=localhost.FormulaUtils.type, tpe.sym=object FormulaUtils, tpe.sym.owner=package localhost, tpe.decls=List(constructor FormulaUtils: ()object localhost.FormulaUtils, , method String2Var: (str: String)localhost.Var, , method Boolean2Atom: (b: Boolean)localhost.Atom[localhost.Pred], , method not: (a: localhost.Formula[localhost.Pred])localhost.Not[localhost.Pred], , method varat: [T](variable: T, loc: Int)T, )
+								This("localhost"), // sym=package localhost, sym.owner=package <root>, sym.tpe=package localhost, tpe=localhost.type, tpe.sym=package localhost, tpe.sym.owner=package <root>
+								"FormulaUtils"),
+							  "Boolean2Atom"),
+							List( // 1 arguments(s)
+							  Apply( // sym=method ==, tpe=Boolean, tpe.sym=class Boolean, tpe.sym.owner=package scala
+								Select( // sym=method ==, sym.owner=class Int, sym.tpe=(x: Int)Boolean, tpe=(x: Int)Boolean, tpe.sym=<none>
+								  Ident("y"), // sym=variable y, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala,
+								  "$eq$eq"),
+								List( // 1 arguments(s)
+								  Apply( // sym=method +, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+									Select( // sym=method +, sym.owner=class Int, sym.tpe=(x: Int)Int, tpe=(x: Int)Int, tpe.sym=<none>
+									  Apply( // sym=method varat, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+										TypeApply( // sym=method varat, tpe=(variable: Int, loc: Int)Int, tpe.sym=<none>
+										  Select( // sym=method varat, sym.owner=object FormulaUtils, sym.tpe=[T](variable: T, loc: Int)T, tpe=[T](variable: T, loc: Int)T, tpe.sym=<none>
+											Ident("FormulaUtils"), // sym=object FormulaUtils, sym.owner=package localhost, sym.tpe=object localhost.FormulaUtils, tpe=localhost.FormulaUtils.type, tpe.sym=object FormulaUtils, tpe.sym.owner=package localhost, tpe.decls=List(constructor FormulaUtils: ()object localhost.FormulaUtils, , method String2Var: (str: String)localhost.Var, , method Boolean2Atom: (b: Boolean)localhost.Atom[localhost.Pred], , method not: (a: localhost.Formula[localhost.Pred])localhost.Not[localhost.Pred], , method varat: [T](variable: T, loc: Int)T, ),
+											"varat"),
+										  List(
+										  TypeTree() // sym=class Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+										  )
+										),
+										List( // 2 arguments(s)
+										  Ident("y"), // sym=variable y, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala,
+										  Literal(Constant(1))
+										)
+									  ),
+									  "$plus"),
+									List( // 1 arguments(s)
+									  Literal(Constant(2))
+									)
+								  )
+								)
+							  )
+							)
+						  )
+						)
+					  )
+					),
+					Ident("y") // sym=variable y, sym.owner=method getMax, sym.tpe=Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+				  )
+				)
+			  ),
+			  "sEnsuring"),
+			List( // 1 arguments(s)
+			  Function(
+				  ValDef( // sym=value rv, sym.owner=value $anonfun, sym.tpe=Int, tpe=<notype>, tpe.sym=<none>
+					ram>, // flags=<param>, annots=List()
+					"rv",
+					TypeTree(), // sym=class Int, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala,
+					EmptyTree
+				  )
+			  )
+				Apply( // sym=method Boolean2Atom, tpe=localhost.Atom[localhost.Pred], tpe.sym=class Atom, tpe.sym.owner=package localhost, tpe.decls=List(value a: => T, , value a: T, , constructor Atom: (a: T)localhost.Atom[T], , method copy: [T](a: T)localhost.Atom[T], , method copy$default$1: [T]=> T @scala.annotation.unchecked.uncheckedVariance, , method hashCode: ()Int, , method toString: ()String, , method equals: (x$1: Any)Boolean, , method productPrefix: => java.lang.String, , method productArity: => Int, , method productElement: (x$1: Int)Any, , method canEqual: (x$1: Any)Boolean, )
+				  Select( // sym=method Boolean2Atom, sym.owner=object FormulaUtils, sym.tpe=(b: Boolean)localhost.Atom[localhost.Pred], tpe=(b: Boolean)localhost.Atom[localhost.Pred], tpe.sym=<none>
+					Select( // sym=object FormulaUtils, sym.owner=package localhost, sym.tpe=object localhost.FormulaUtils, tpe=localhost.FormulaUtils.type, tpe.sym=object FormulaUtils, tpe.sym.owner=package localhost, tpe.decls=List(constructor FormulaUtils: ()object localhost.FormulaUtils, , method String2Var: (str: String)localhost.Var, , method Boolean2Atom: (b: Boolean)localhost.Atom[localhost.Pred], , method not: (a: localhost.Formula[localhost.Pred])localhost.Not[localhost.Pred], , method varat: [T](variable: T, loc: Int)T, )
+					  This("localhost"), // sym=package localhost, sym.owner=package <root>, sym.tpe=package localhost, tpe=localhost.type, tpe.sym=package localhost, tpe.sym.owner=package <root>
+					  "FormulaUtils"),
+					"Boolean2Atom"),
+				  List( // 1 arguments(s)
+					Apply( // sym=method ==, tpe=Boolean, tpe.sym=class Boolean, tpe.sym.owner=package scala
+					  Select( // sym=method ==, sym.owner=class Int, sym.tpe=(x: Int)Boolean, tpe=(x: Int)Boolean, tpe.sym=<none>
+						Ident("rv"), // sym=value rv, sym.owner=value $anonfun, sym.tpe=Int, tpe=rv.type, tpe.sym=value rv, tpe.sym.owner=value $anonfun, tpe.decls=List(method toByte: => Byte, , method toShort: => Short, , method toChar: => Char, , method toInt: => Int, , method toLong: => Long, , method toFloat: => Float, , method toDouble: => Double, , method unary_+: => Int, , method unary_-: => Int, , method unary_~: => Int, , method +: (x: String)String, , method <<: (x: <?>)Int, , method <<: (x: <?>)Int, , method >>>: (x: <?>)Int, , method >>>: (x: <?>)Int, , method >>: (x: <?>)Int, , method >>: (x: <?>)Int, , method ==: (x: Byte)Boolean, , method ==: (x: Short)Boolean, , method ==: (x: Char)Boolean, , method ==: (x: Int)Boolean, , method ==: (x: Long)Boolean, , method ==: (x: Float)Boolean, , method ==: (x: Double)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method |: (x: <?>)Int, , method |: (x: <?>)Int, , method |: (x: <?>)Int, , method |: (x: <?>)Int, , method |: (x: <?>)Long, , method &: (x: <?>)Int, , method &: (x: <?>)Int, , method &: (x: <?>)Int, , method &: (x: <?>)Int, , method &: (x: <?>)Long, , method ^: (x: <?>)Int, , method ^: (x: <?>)Int, , method ^: (x: <?>)Int, , method ^: (x: <?>)Int, , method ^: (x: <?>)Long, , method +: (x: Byte)Int, , method +: (x: Short)Int, , method +: (x: Char)Int, , method +: (x: Int)Int, , method +: (x: Long)Long, , method +: (x: Float)Float, , method +: (x: Double)Double, , method -: (x: <?>)Int, , method -: (x: <?>)Int, , method -: (x: <?>)Int, , method -: (x: <?>)Int, , method -: (x: <?>)Long, , method -: (x: <?>)Float, , method -: (x: <?>)Double, , method *: (x: <?>)Int, , method *: (x: <?>)Int, , method *: (x: <?>)Int, , method *: (x: <?>)Int, , method *: (x: <?>)Long, , method *: (x: <?>)Float, , method *: (x: <?>)Double, , method /: (x: <?>)Int, , method /: (x: <?>)Int, , method /: (x: <?>)Int, , method /: (x: <?>)Int, , method /: (x: <?>)Long, , method /: (x: <?>)Float, , method /: (x: <?>)Double, , method %: (x: <?>)Int, , method %: (x: <?>)Int, , method %: (x: <?>)Int, , method %: (x: <?>)Int, , method %: (x: <?>)Long, , method %: (x: <?>)Float, , method %: (x: <?>)Double, , method getClass: ()Class[Int], ),
+						"$eq$eq"),
+					  List( // 1 arguments(s)
+						Apply( // sym=method +, tpe=Int, tpe.sym=class Int, tpe.sym.owner=package scala
+						  Select( // sym=method +, sym.owner=class Int, sym.tpe=(x: Int)Int, tpe=(x: Int)Int, tpe.sym=<none>
+							Ident("x"), // sym=value x, sym.owner=method getMax, sym.tpe=Int, tpe=x.type, tpe.sym=value x, tpe.sym.owner=method getMax, tpe.decls=List(method toByte: => Byte, , method toShort: => Short, , method toChar: => Char, , method toInt: => Int, , method toLong: => Long, , method toFloat: => Float, , method toDouble: => Double, , method unary_+: => Int, , method unary_-: => Int, , method unary_~: => Int, , method +: (x: String)String, , method <<: (x: <?>)Int, , method <<: (x: <?>)Int, , method >>>: (x: <?>)Int, , method >>>: (x: <?>)Int, , method >>: (x: <?>)Int, , method >>: (x: <?>)Int, , method ==: (x: Byte)Boolean, , method ==: (x: Short)Boolean, , method ==: (x: Char)Boolean, , method ==: (x: Int)Boolean, , method ==: (x: Long)Boolean, , method ==: (x: Float)Boolean, , method ==: (x: Double)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method !=: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method <=: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method >=: (x: <?>)Boolean, , method |: (x: <?>)Int, , method |: (x: <?>)Int, , method |: (x: <?>)Int, , method |: (x: <?>)Int, , method |: (x: <?>)Long, , method &: (x: <?>)Int, , method &: (x: <?>)Int, , method &: (x: <?>)Int, , method &: (x: <?>)Int, , method &: (x: <?>)Long, , method ^: (x: <?>)Int, , method ^: (x: <?>)Int, , method ^: (x: <?>)Int, , method ^: (x: <?>)Int, , method ^: (x: <?>)Long, , method +: (x: Byte)Int, , method +: (x: Short)Int, , method +: (x: Char)Int, , method +: (x: Int)Int, , method +: (x: Long)Long, , method +: (x: Float)Float, , method +: (x: Double)Double, , method -: (x: <?>)Int, , method -: (x: <?>)Int, , method -: (x: <?>)Int, , method -: (x: <?>)Int, , method -: (x: <?>)Long, , method -: (x: <?>)Float, , method -: (x: <?>)Double, , method *: (x: <?>)Int, , method *: (x: <?>)Int, , method *: (x: <?>)Int, , method *: (x: <?>)Int, , method *: (x: <?>)Long, , method *: (x: <?>)Float, , method *: (x: <?>)Double, , method /: (x: <?>)Int, , method /: (x: <?>)Int, , method /: (x: <?>)Int, , method /: (x: <?>)Int, , method /: (x: <?>)Long, , method /: (x: <?>)Float, , method /: (x: <?>)Double, , method %: (x: <?>)Int, , method %: (x: <?>)Int, , method %: (x: <?>)Int, , method %: (x: <?>)Int, , method %: (x: <?>)Long, , method %: (x: <?>)Float, , method %: (x: <?>)Double, , method getClass: ()Class[Int], ),
+							"$plus"),
+						  List( // 1 arguments(s)
+							Literal(Constant(2))
+						  )
+						)
+					  )
+					)
+				  )
+				)
+			  )
+			)
+		  )
+		)
+	  )
+	)
+  )
+)

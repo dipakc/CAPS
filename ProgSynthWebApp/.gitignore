@@ -1,0 +1,42 @@
+bin
+*.log
+*.bak
+.cache
+.cache-main
+.cache-tests
+*~
+target/
+project/boot/
+.release.sbt
+.worksheet/
+.target/
+tmp/*
+logs/*
+data/*
+
+#Office Temp files
+~$*
+
+#Visual Studio
+public/bin
+public/obj
+
+#Visual Studio User Specific
+*.suo
+*.user
+*.sln.docstates
+
+#NuGet
+public/packages
+
+#Typescript
+*.js.map
+
+test-reports/*
+!test-reports/.gitkeep
+testlogs/*
+!testlogs/.gitkeep
+
+prjfiles/why3_playground
+
+CAPS4.2.lnk

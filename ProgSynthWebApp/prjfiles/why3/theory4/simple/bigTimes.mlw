@@ -1,0 +1,21 @@
+
+module BigTimes
+
+	use import int.Int
+	(*use import int.MinMax*)
+	use HighOrd as HO
+	use import capsUtil.CapsUtil as CapsUtil
+	
+	constant bigTimes: (int -> bool) -> (int -> int) -> int
+		
+	axiom onePoint:
+		forall r: int -> bool, t: int -> int, x: int.
+			one_point r x -> 
+				bigTimes r t = t x 
+		
+	axiom emptyRange:
+		forall r: int -> bool, t: int -> int.
+			empty_range r -> 
+				bigTimes r t = 1 
+				
+end

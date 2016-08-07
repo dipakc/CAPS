@@ -1,0 +1,3068 @@
+<html>
+<head>
+		<link type="text/css" rel="stylesheet" href="progsynthlog.css"></link>
+		<script class="jsbin" src="http://code.jquery.com/jquery-1.7.2.min.js"> a </script>
+    	<script type="text/javascript">
+			jQuery(document).ready(function() {
+			jQuery("collapse").hide();
+
+			jQuery("collapse").click(function(event)
+			{
+			if(event.target == this) {
+			jQuery(this).next().slideToggle(500);
+			jQuery(this).slideToggle(50);
+			}
+			});
+
+			jQuery("collapse + *").dblclick(function(event)
+			{
+			if(event.target == this) {
+			jQuery(this).prev().slideToggle(500);
+			jQuery(this).slideToggle(500);
+			}
+			//e.stopPropogation();
+			});
+
+	});</script>
+	</head>
+<body>
+<div class="srcfile">
+ <div class="posummary"> PO Status: All Valid </div>
+ <div class="FunctionProg">
+  <div class="deco">def intSqrt2(N: PSInt): PSInt</div>
+  <div class="annProg">
+   <collapse>ooo</collapse>
+   <div class="ProgramAnn unfolded">
+    <div class="id">13</div>
+    <div class="displayId">-1</div>
+    <div class="pre">
+     <div class="Invariant" displayIdAttr="-1">
+      <div class="loc">None</div>
+      <div class="formula">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="Const" displayIdAttr="-1">
+            <div class="name">0</div>
+            <div class="deco">:</div>
+            <div class="tpe">PSInt</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="rvVar"></div>
+     </div>
+    </div>
+    <div class="program">
+     <div class="Composition">
+      <div class="programs">
+       <collapse>ooo</collapse>
+       <div class="ProgramAnn unfolded">
+        <div class="id">10</div>
+        <div class="displayId">-1</div>
+        <div class="pre">
+         <div class="Invariant" displayIdAttr="-1">
+          <div class="loc">None</div>
+          <div class="formula">
+           <div class="Atom">
+            <div class="a">
+             <div class="Pred" displayIdAttr="-1">
+              <div class="ts">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">0</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="r">&le;</div>
+              <div class="ts">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">N</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="rvVar"></div>
+         </div>
+        </div>
+        <div class="program">
+         <div class="VarDefProg">
+          <div class="deco"> var </div>
+          <div class="lhs">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+          <div class="deco"> := </div>
+          <div class="rhs">
+           <collapse>ooo</collapse>
+           <div class="ProgramAnn unfolded">
+            <div class="id">1</div>
+            <div class="displayId">-1</div>
+            <div class="pre">
+             <div class="Invariant" displayIdAttr="-1">
+              <div class="loc">None</div>
+              <div class="formula">
+               <div class="Atom">
+                <div class="a">
+                 <div class="Pred" displayIdAttr="-1">
+                  <div class="ts">
+                   <div class="Const" displayIdAttr="-1">
+                    <div class="name">0</div>
+                    <div class="deco">:</div>
+                    <div class="tpe">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="r">&le;</div>
+                  <div class="ts">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">N</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="rvVar"></div>
+             </div>
+            </div>
+            <div class="program">
+             <div class="ExprProg">
+              <div class="expr">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">0</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="post">
+             <div class="Invariant" displayIdAttr="-1">
+              <div class="loc">None</div>
+              <div class="formula">
+               <div class="Atom">
+                <div class="a">
+                 <div class="Pred" displayIdAttr="-1">
+                  <div class="ts">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#42;</div>
+                    <div class="t2">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="r">&le;</div>
+                  <div class="ts">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">N</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+               </div>
+              </div>
+              <div class="rvVar">x</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="post">
+         <div class="Invariant" displayIdAttr="-1">
+          <div class="loc">None</div>
+          <div class="formula">
+           <div class="Atom">
+            <div class="a">
+             <div class="Pred" displayIdAttr="-1">
+              <div class="ts">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#42;</div>
+                <div class="t2">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="r">&le;</div>
+              <div class="ts">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">N</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="rvVar"></div>
+         </div>
+        </div>
+       </div>
+       <collapse>ooo</collapse>
+       <div class="ProgramAnn unfolded">
+        <div class="id">12</div>
+        <div class="displayId">-1</div>
+        <div class="pre">
+         <div class="Invariant" displayIdAttr="-1">
+          <div class="loc">None</div>
+          <div class="formula">
+           <div class="Atom">
+            <div class="a">
+             <div class="Pred" displayIdAttr="-1">
+              <div class="ts">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#42;</div>
+                <div class="t2">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="r">&le;</div>
+              <div class="ts">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">N</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="rvVar"></div>
+         </div>
+        </div>
+        <div class="program">
+         <div class="WhileProg">
+          <div class="deco">WHILE </div>
+          <div class="loopInv">
+           <div class="Atom">
+            <div class="a">
+             <div class="Pred" displayIdAttr="-1">
+              <div class="ts">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#42;</div>
+                <div class="t2">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="r">&le;</div>
+              <div class="ts">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">N</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="grdcmds">
+           <div class="GuardedCmd">
+            <div class="guard">
+             <div class="Atom">
+              <div class="a">
+               <div class="Pred" displayIdAttr="-1">
+                <div class="ts">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#42;</div>
+                  <div class="t2">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="r">&le;</div>
+                <div class="ts">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">N</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="deco">&#10230</div>
+            <div class="cmd">
+             <collapse>ooo</collapse>
+             <div class="ProgramAnn unfolded">
+              <div class="id">11</div>
+              <div class="displayId">-1</div>
+              <div class="pre">
+               <div class="Invariant" displayIdAttr="-1">
+                <div class="loc">None</div>
+                <div class="formula">
+                 <div class="AndN" displayIdAttr="-1">
+                  <div class="fi">
+                   <div class="Atom">
+                    <div class="a">
+                     <div class="Pred" displayIdAttr="-1">
+                      <div class="ts">
+                       <div class="FnApp" displayIdAttr="-1">
+                        <div class="deco">(</div>
+                        <div class="t1">
+                         <div class="Var" displayIdAttr="-1">
+                          <div class="v">x</div>
+                          <div class="deco">:</div>
+                          <div class="t">PSInt</div>
+                         </div>
+                        </div>
+                        <div class="opr">&#42;</div>
+                        <div class="t2">
+                         <div class="Var" displayIdAttr="-1">
+                          <div class="v">x</div>
+                          <div class="deco">:</div>
+                          <div class="t">PSInt</div>
+                         </div>
+                        </div>
+                        <div class="deco">)</div>
+                       </div>
+                      </div>
+                      <div class="r">&le;</div>
+                      <div class="ts">
+                       <div class="Var" displayIdAttr="-1">
+                        <div class="v">N</div>
+                        <div class="deco">:</div>
+                        <div class="t">PSInt</div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                  <div class="deco">/\</div>
+                  <div class="fi">
+                   <div class="Atom">
+                    <div class="a">
+                     <div class="Pred" displayIdAttr="-1">
+                      <div class="ts">
+                       <div class="FnApp" displayIdAttr="-1">
+                        <div class="deco">(</div>
+                        <div class="t1">
+                         <div class="FnApp" displayIdAttr="-1">
+                          <div class="deco">(</div>
+                          <div class="t1">
+                           <div class="Var" displayIdAttr="-1">
+                            <div class="v">x</div>
+                            <div class="deco">:</div>
+                            <div class="t">PSInt</div>
+                           </div>
+                          </div>
+                          <div class="opr">&#43;</div>
+                          <div class="t2">
+                           <div class="Const" displayIdAttr="-1">
+                            <div class="name">1</div>
+                            <div class="deco">:</div>
+                            <div class="tpe">PSInt</div>
+                           </div>
+                          </div>
+                          <div class="deco">)</div>
+                         </div>
+                        </div>
+                        <div class="opr">&#42;</div>
+                        <div class="t2">
+                         <div class="FnApp" displayIdAttr="-1">
+                          <div class="deco">(</div>
+                          <div class="t1">
+                           <div class="Var" displayIdAttr="-1">
+                            <div class="v">x</div>
+                            <div class="deco">:</div>
+                            <div class="t">PSInt</div>
+                           </div>
+                          </div>
+                          <div class="opr">&#43;</div>
+                          <div class="t2">
+                           <div class="Const" displayIdAttr="-1">
+                            <div class="name">1</div>
+                            <div class="deco">:</div>
+                            <div class="tpe">PSInt</div>
+                           </div>
+                          </div>
+                          <div class="deco">)</div>
+                         </div>
+                        </div>
+                        <div class="deco">)</div>
+                       </div>
+                      </div>
+                      <div class="r">&le;</div>
+                      <div class="ts">
+                       <div class="Var" displayIdAttr="-1">
+                        <div class="v">N</div>
+                        <div class="deco">:</div>
+                        <div class="t">PSInt</div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="rvVar"></div>
+               </div>
+              </div>
+              <div class="program">
+               <div class="Assignment program">
+                <table class="tablestyle">
+                 <tr>
+                  <td class="lhsvar">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </td>
+                  <td rowspan="1"> := </td>
+                  <td class="rhsprog">
+                   <collapse>ooo</collapse>
+                   <div class="ProgramAnn unfolded">
+                    <div class="id">3</div>
+                    <div class="displayId">-1</div>
+                    <div class="pre">
+                     <div class="Invariant" displayIdAttr="-1">
+                      <div class="loc">None</div>
+                      <div class="formula">
+                       <div class="AndN" displayIdAttr="-1">
+                        <div class="fi">
+                         <div class="Atom">
+                          <div class="a">
+                           <div class="Pred" displayIdAttr="-1">
+                            <div class="ts">
+                             <div class="FnApp" displayIdAttr="-1">
+                              <div class="deco">(</div>
+                              <div class="t1">
+                               <div class="Var" displayIdAttr="-1">
+                                <div class="v">x</div>
+                                <div class="deco">:</div>
+                                <div class="t">PSInt</div>
+                               </div>
+                              </div>
+                              <div class="opr">&#42;</div>
+                              <div class="t2">
+                               <div class="Var" displayIdAttr="-1">
+                                <div class="v">x</div>
+                                <div class="deco">:</div>
+                                <div class="t">PSInt</div>
+                               </div>
+                              </div>
+                              <div class="deco">)</div>
+                             </div>
+                            </div>
+                            <div class="r">&le;</div>
+                            <div class="ts">
+                             <div class="Var" displayIdAttr="-1">
+                              <div class="v">N</div>
+                              <div class="deco">:</div>
+                              <div class="t">PSInt</div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                        <div class="deco">/\</div>
+                        <div class="fi">
+                         <div class="Atom">
+                          <div class="a">
+                           <div class="Pred" displayIdAttr="-1">
+                            <div class="ts">
+                             <div class="FnApp" displayIdAttr="-1">
+                              <div class="deco">(</div>
+                              <div class="t1">
+                               <div class="FnApp" displayIdAttr="-1">
+                                <div class="deco">(</div>
+                                <div class="t1">
+                                 <div class="Var" displayIdAttr="-1">
+                                  <div class="v">x</div>
+                                  <div class="deco">:</div>
+                                  <div class="t">PSInt</div>
+                                 </div>
+                                </div>
+                                <div class="opr">&#43;</div>
+                                <div class="t2">
+                                 <div class="Const" displayIdAttr="-1">
+                                  <div class="name">1</div>
+                                  <div class="deco">:</div>
+                                  <div class="tpe">PSInt</div>
+                                 </div>
+                                </div>
+                                <div class="deco">)</div>
+                               </div>
+                              </div>
+                              <div class="opr">&#42;</div>
+                              <div class="t2">
+                               <div class="FnApp" displayIdAttr="-1">
+                                <div class="deco">(</div>
+                                <div class="t1">
+                                 <div class="Var" displayIdAttr="-1">
+                                  <div class="v">x</div>
+                                  <div class="deco">:</div>
+                                  <div class="t">PSInt</div>
+                                 </div>
+                                </div>
+                                <div class="opr">&#43;</div>
+                                <div class="t2">
+                                 <div class="Const" displayIdAttr="-1">
+                                  <div class="name">1</div>
+                                  <div class="deco">:</div>
+                                  <div class="tpe">PSInt</div>
+                                 </div>
+                                </div>
+                                <div class="deco">)</div>
+                               </div>
+                              </div>
+                              <div class="deco">)</div>
+                             </div>
+                            </div>
+                            <div class="r">&le;</div>
+                            <div class="ts">
+                             <div class="Var" displayIdAttr="-1">
+                              <div class="v">N</div>
+                              <div class="deco">:</div>
+                              <div class="t">PSInt</div>
+                             </div>
+                            </div>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="rvVar"></div>
+                     </div>
+                    </div>
+                    <div class="program">
+                     <div class="ExprProg">
+                      <div class="expr">
+                       <div class="FnApp" displayIdAttr="-1">
+                        <div class="deco">(</div>
+                        <div class="t1">
+                         <div class="Var" displayIdAttr="-1">
+                          <div class="v">x</div>
+                          <div class="deco">:</div>
+                          <div class="t">PSInt</div>
+                         </div>
+                        </div>
+                        <div class="opr">&#43;</div>
+                        <div class="t2">
+                         <div class="Const" displayIdAttr="-1">
+                          <div class="name">1</div>
+                          <div class="deco">:</div>
+                          <div class="tpe">PSInt</div>
+                         </div>
+                        </div>
+                        <div class="deco">)</div>
+                       </div>
+                      </div>
+                     </div>
+                    </div>
+                    <div class="post">
+                     <div class="Invariant" displayIdAttr="-1">
+                      <div class="loc">None</div>
+                      <div class="formula">
+                       <div class="Atom">
+                        <div class="a">
+                         <div class="Pred" displayIdAttr="-1">
+                          <div class="ts">
+                           <div class="FnApp" displayIdAttr="-1">
+                            <div class="deco">(</div>
+                            <div class="t1">
+                             <div class="Var" displayIdAttr="-1">
+                              <div class="v">x</div>
+                              <div class="deco">:</div>
+                              <div class="t">PSInt</div>
+                             </div>
+                            </div>
+                            <div class="opr">&#42;</div>
+                            <div class="t2">
+                             <div class="Var" displayIdAttr="-1">
+                              <div class="v">x</div>
+                              <div class="deco">:</div>
+                              <div class="t">PSInt</div>
+                             </div>
+                            </div>
+                            <div class="deco">)</div>
+                           </div>
+                          </div>
+                          <div class="r">&le;</div>
+                          <div class="ts">
+                           <div class="Var" displayIdAttr="-1">
+                            <div class="v">N</div>
+                            <div class="deco">:</div>
+                            <div class="t">PSInt</div>
+                           </div>
+                          </div>
+                         </div>
+                        </div>
+                       </div>
+                      </div>
+                      <div class="rvVar">x</div>
+                     </div>
+                    </div>
+                   </div>
+                  </td>
+                 </tr>
+                </table>
+               </div>
+              </div>
+              <div class="post">
+               <div class="Invariant" displayIdAttr="-1">
+                <div class="loc">None</div>
+                <div class="formula">
+                 <div class="Atom">
+                  <div class="a">
+                   <div class="Pred" displayIdAttr="-1">
+                    <div class="ts">
+                     <div class="FnApp" displayIdAttr="-1">
+                      <div class="deco">(</div>
+                      <div class="t1">
+                       <div class="Var" displayIdAttr="-1">
+                        <div class="v">x</div>
+                        <div class="deco">:</div>
+                        <div class="t">PSInt</div>
+                       </div>
+                      </div>
+                      <div class="opr">&#42;</div>
+                      <div class="t2">
+                       <div class="Var" displayIdAttr="-1">
+                        <div class="v">x</div>
+                        <div class="deco">:</div>
+                        <div class="t">PSInt</div>
+                       </div>
+                      </div>
+                      <div class="deco">)</div>
+                     </div>
+                    </div>
+                    <div class="r">&le;</div>
+                    <div class="ts">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">N</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                   </div>
+                  </div>
+                 </div>
+                </div>
+                <div class="rvVar"></div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="post">
+         <div class="Invariant" displayIdAttr="-1">
+          <div class="loc">None</div>
+          <div class="formula">
+           <div class="AndN" displayIdAttr="-1">
+            <div class="fi">
+             <div class="Atom">
+              <div class="a">
+               <div class="Pred" displayIdAttr="-1">
+                <div class="ts">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#42;</div>
+                  <div class="t2">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="r">&le;</div>
+                <div class="ts">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">N</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="deco">/\</div>
+            <div class="fi">
+             <div class="Atom">
+              <div class="a">
+               <div class="Pred" displayIdAttr="-1">
+                <div class="ts">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#42;</div>
+                  <div class="t2">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="r">></div>
+                <div class="ts">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">N</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="rvVar"></div>
+         </div>
+        </div>
+       </div>
+       <collapse>ooo</collapse>
+       <div class="ProgramAnn unfolded">
+        <div class="id">7</div>
+        <div class="displayId">-1</div>
+        <div class="pre">
+         <div class="Invariant" displayIdAttr="-1">
+          <div class="loc">None</div>
+          <div class="formula">
+           <div class="AndN" displayIdAttr="-1">
+            <div class="fi">
+             <div class="Atom">
+              <div class="a">
+               <div class="Pred" displayIdAttr="-1">
+                <div class="ts">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#42;</div>
+                  <div class="t2">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="r">&le;</div>
+                <div class="ts">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">N</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="deco">/\</div>
+            <div class="fi">
+             <div class="Atom">
+              <div class="a">
+               <div class="Pred" displayIdAttr="-1">
+                <div class="ts">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#42;</div>
+                  <div class="t2">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="r">></div>
+                <div class="ts">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">N</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="rvVar"></div>
+         </div>
+        </div>
+        <div class="program">
+         <div class="ExprProg">
+          <div class="expr">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="post">
+         <div class="Invariant" displayIdAttr="-1">
+          <div class="loc">None</div>
+          <div class="formula">
+           <div class="AndN" displayIdAttr="-1">
+            <div class="fi">
+             <div class="Atom">
+              <div class="a">
+               <div class="Pred" displayIdAttr="-1">
+                <div class="ts">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#42;</div>
+                  <div class="t2">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="r">&le;</div>
+                <div class="ts">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">N</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+            <div class="deco">/\</div>
+            <div class="fi">
+             <div class="Atom">
+              <div class="a">
+               <div class="Pred" displayIdAttr="-1">
+                <div class="ts">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#42;</div>
+                  <div class="t2">
+                   <div class="FnApp" displayIdAttr="-1">
+                    <div class="deco">(</div>
+                    <div class="t1">
+                     <div class="Var" displayIdAttr="-1">
+                      <div class="v">x</div>
+                      <div class="deco">:</div>
+                      <div class="t">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="opr">&#43;</div>
+                    <div class="t2">
+                     <div class="Const" displayIdAttr="-1">
+                      <div class="name">1</div>
+                      <div class="deco">:</div>
+                      <div class="tpe">PSInt</div>
+                     </div>
+                    </div>
+                    <div class="deco">)</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="r">></div>
+                <div class="ts">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">N</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="rvVar">x</div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="post">
+     <div class="Invariant" displayIdAttr="-1">
+      <div class="loc">None</div>
+      <div class="formula">
+       <div class="AndN" displayIdAttr="-1">
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">/\</div>
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">></div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="rvVar">x</div>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+ <collapse>ooo</collapse>
+ <div class="pa_proofobligs unfolded">
+  <div class="pa_id">13</div>
+  <div class="proofoblig">
+   <div class="Impl" displayIdAttr="-1">
+    <div class="f1">
+     <div class="Atom">
+      <div class="a">
+       <div class="Pred" displayIdAttr="-1">
+        <div class="ts">
+         <div class="Const" displayIdAttr="-1">
+          <div class="name">0</div>
+          <div class="deco">:</div>
+          <div class="tpe">PSInt</div>
+         </div>
+        </div>
+        <div class="r">&le;</div>
+        <div class="ts">
+         <div class="Var" displayIdAttr="-1">
+          <div class="v">N</div>
+          <div class="deco">:</div>
+          <div class="t">PSInt</div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="deco">&rarr;</div>
+    <div class="f2">
+     <div class="Atom">
+      <div class="a">
+       <div class="Pred" displayIdAttr="-1">
+        <div class="ts">
+         <div class="Const" displayIdAttr="-1">
+          <div class="name">0</div>
+          <div class="deco">:</div>
+          <div class="tpe">PSInt</div>
+         </div>
+        </div>
+        <div class="r">&le;</div>
+        <div class="ts">
+         <div class="Var" displayIdAttr="-1">
+          <div class="v">N</div>
+          <div class="deco">:</div>
+          <div class="t">PSInt</div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <collapse>ooo</collapse>
+   <div class="status">
+    <div class="valid">valid</div>
+   </div>
+  </div>
+  <div class="proofoblig">
+   <div class="Impl" displayIdAttr="-1">
+    <div class="f1">
+     <div class="Atom">
+      <div class="a">
+       <div class="Pred" displayIdAttr="-1">
+        <div class="ts">
+         <div class="FnApp" displayIdAttr="-1">
+          <div class="deco">(</div>
+          <div class="t1">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+          <div class="opr">&#42;</div>
+          <div class="t2">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+          <div class="deco">)</div>
+         </div>
+        </div>
+        <div class="r">&le;</div>
+        <div class="ts">
+         <div class="Var" displayIdAttr="-1">
+          <div class="v">N</div>
+          <div class="deco">:</div>
+          <div class="t">PSInt</div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="deco">&rarr;</div>
+    <div class="f2">
+     <div class="Atom">
+      <div class="a">
+       <div class="Pred" displayIdAttr="-1">
+        <div class="ts">
+         <div class="FnApp" displayIdAttr="-1">
+          <div class="deco">(</div>
+          <div class="t1">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+          <div class="opr">&#42;</div>
+          <div class="t2">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+          <div class="deco">)</div>
+         </div>
+        </div>
+        <div class="r">&le;</div>
+        <div class="ts">
+         <div class="Var" displayIdAttr="-1">
+          <div class="v">N</div>
+          <div class="deco">:</div>
+          <div class="t">PSInt</div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <collapse>ooo</collapse>
+   <div class="status">
+    <div class="valid">valid</div>
+   </div>
+  </div>
+  <div class="proofoblig">
+   <div class="Impl" displayIdAttr="-1">
+    <div class="deco">(</div>
+    <div class="f1">
+     <div class="AndN" displayIdAttr="-1">
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">/\</div>
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">></div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="deco">)</div>
+    <div class="deco">&rarr;</div>
+    <div class="deco">(</div>
+    <div class="f2">
+     <div class="AndN" displayIdAttr="-1">
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">/\</div>
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">></div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="deco">)</div>
+   </div>
+   <collapse>ooo</collapse>
+   <div class="status">
+    <div class="valid">valid</div>
+   </div>
+  </div>
+  <div class="proofoblig">
+   <div class="Impl" displayIdAttr="-1">
+    <div class="deco">(</div>
+    <div class="f1">
+     <div class="AndN" displayIdAttr="-1">
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">/\</div>
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">></div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">/\</div>
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+          <div class="r">=</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">x</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="deco">)</div>
+    <div class="deco">&rarr;</div>
+    <div class="deco">(</div>
+    <div class="f2">
+     <div class="AndN" displayIdAttr="-1">
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">/\</div>
+      <div class="fi">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#43;</div>
+              <div class="t2">
+               <div class="Const" displayIdAttr="-1">
+                <div class="name">1</div>
+                <div class="deco">:</div>
+                <div class="tpe">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">></div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="deco">)</div>
+   </div>
+   <collapse>ooo</collapse>
+   <div class="status">
+    <div class="valid">valid</div>
+   </div>
+  </div>
+  <div class="prg_proofobligs">
+   <collapse>ooo</collapse>
+   <div class="pa_proofobligs unfolded">
+    <div class="pa_id">10</div>
+    <div class="proofoblig">
+     <div class="Impl" displayIdAttr="-1">
+      <div class="f1">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="Const" displayIdAttr="-1">
+            <div class="name">0</div>
+            <div class="deco">:</div>
+            <div class="tpe">PSInt</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">&rarr;</div>
+      <div class="f2">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="Const" displayIdAttr="-1">
+            <div class="name">0</div>
+            <div class="deco">:</div>
+            <div class="tpe">PSInt</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <collapse>ooo</collapse>
+     <div class="status">
+      <div class="valid">valid</div>
+     </div>
+    </div>
+    <div class="proofoblig">
+     <div class="Impl" displayIdAttr="-1">
+      <div class="f1">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="Const" displayIdAttr="-1">
+            <div class="name">0</div>
+            <div class="deco">:</div>
+            <div class="tpe">PSInt</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">&rarr;</div>
+      <div class="f2">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Const" displayIdAttr="-1">
+              <div class="name">0</div>
+              <div class="deco">:</div>
+              <div class="tpe">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Const" displayIdAttr="-1">
+              <div class="name">0</div>
+              <div class="deco">:</div>
+              <div class="tpe">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <collapse>ooo</collapse>
+     <div class="status">
+      <div class="valid">valid</div>
+     </div>
+    </div>
+    <div class="prg_proofobligs">
+     <collapse>ooo</collapse>
+     <div class="pa_proofobligs unfolded">
+      <div class="pa_id">1</div>
+      <div class="prg_proofobligs"></div>
+     </div>
+    </div>
+   </div>
+   <collapse>ooo</collapse>
+   <div class="pa_proofobligs unfolded">
+    <div class="pa_id">12</div>
+    <div class="proofoblig">
+     <div class="Impl" displayIdAttr="-1">
+      <div class="f1">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">&rarr;</div>
+      <div class="f2">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <collapse>ooo</collapse>
+     <div class="status">
+      <div class="valid">valid</div>
+     </div>
+    </div>
+    <div class="proofoblig">
+     <div class="Impl" displayIdAttr="-1">
+      <div class="deco">(</div>
+      <div class="f1">
+       <div class="AndN" displayIdAttr="-1">
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">/\</div>
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">)</div>
+      <div class="deco">&rarr;</div>
+      <div class="deco">(</div>
+      <div class="f2">
+       <div class="AndN" displayIdAttr="-1">
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">/\</div>
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">)</div>
+     </div>
+     <collapse>ooo</collapse>
+     <div class="status">
+      <div class="valid">valid</div>
+     </div>
+    </div>
+    <div class="proofoblig">
+     <div class="Impl" displayIdAttr="-1">
+      <div class="f1">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">&rarr;</div>
+      <div class="f2">
+       <div class="Atom">
+        <div class="a">
+         <div class="Pred" displayIdAttr="-1">
+          <div class="ts">
+           <div class="FnApp" displayIdAttr="-1">
+            <div class="deco">(</div>
+            <div class="t1">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="opr">&#42;</div>
+            <div class="t2">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">x</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+            <div class="deco">)</div>
+           </div>
+          </div>
+          <div class="r">&le;</div>
+          <div class="ts">
+           <div class="Var" displayIdAttr="-1">
+            <div class="v">N</div>
+            <div class="deco">:</div>
+            <div class="t">PSInt</div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <collapse>ooo</collapse>
+     <div class="status">
+      <div class="valid">valid</div>
+     </div>
+    </div>
+    <div class="proofoblig">
+     <div class="Impl" displayIdAttr="-1">
+      <div class="deco">(</div>
+      <div class="f1">
+       <div class="AndN" displayIdAttr="-1">
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">/\</div>
+        <div class="fi">
+         <div class="Not" displayIdAttr="-1">
+          <div class="deco">&not;(</div>
+          <div class="f">
+           <div class="Atom">
+            <div class="a">
+             <div class="Pred" displayIdAttr="-1">
+              <div class="ts">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#43;</div>
+                  <div class="t2">
+                   <div class="Const" displayIdAttr="-1">
+                    <div class="name">1</div>
+                    <div class="deco">:</div>
+                    <div class="tpe">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="opr">&#42;</div>
+                <div class="t2">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#43;</div>
+                  <div class="t2">
+                   <div class="Const" displayIdAttr="-1">
+                    <div class="name">1</div>
+                    <div class="deco">:</div>
+                    <div class="tpe">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="r">&le;</div>
+              <div class="ts">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">N</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="deco">)</div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">)</div>
+      <div class="deco">&rarr;</div>
+      <div class="deco">(</div>
+      <div class="f2">
+       <div class="AndN" displayIdAttr="-1">
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">/\</div>
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">></div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">)</div>
+     </div>
+     <collapse>ooo</collapse>
+     <div class="status">
+      <div class="valid">valid</div>
+     </div>
+    </div>
+    <div class="prg_proofobligs">
+     <collapse>ooo</collapse>
+     <div class="pa_proofobligs unfolded">
+      <div class="pa_id">11</div>
+      <div class="proofoblig">
+       <div class="Impl" displayIdAttr="-1">
+        <div class="deco">(</div>
+        <div class="f1">
+         <div class="AndN" displayIdAttr="-1">
+          <div class="fi">
+           <div class="Atom">
+            <div class="a">
+             <div class="Pred" displayIdAttr="-1">
+              <div class="ts">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#42;</div>
+                <div class="t2">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="r">&le;</div>
+              <div class="ts">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">N</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+          <div class="deco">/\</div>
+          <div class="fi">
+           <div class="Atom">
+            <div class="a">
+             <div class="Pred" displayIdAttr="-1">
+              <div class="ts">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#43;</div>
+                  <div class="t2">
+                   <div class="Const" displayIdAttr="-1">
+                    <div class="name">1</div>
+                    <div class="deco">:</div>
+                    <div class="tpe">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="opr">&#42;</div>
+                <div class="t2">
+                 <div class="FnApp" displayIdAttr="-1">
+                  <div class="deco">(</div>
+                  <div class="t1">
+                   <div class="Var" displayIdAttr="-1">
+                    <div class="v">x</div>
+                    <div class="deco">:</div>
+                    <div class="t">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="opr">&#43;</div>
+                  <div class="t2">
+                   <div class="Const" displayIdAttr="-1">
+                    <div class="name">1</div>
+                    <div class="deco">:</div>
+                    <div class="tpe">PSInt</div>
+                   </div>
+                  </div>
+                  <div class="deco">)</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="r">&le;</div>
+              <div class="ts">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">N</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">)</div>
+        <div class="deco">&rarr;</div>
+        <div class="f2">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+       <collapse>ooo</collapse>
+       <div class="status">
+        <div class="valid">valid</div>
+       </div>
+      </div>
+      <div class="prg_proofobligs">
+       <collapse>ooo</collapse>
+       <div class="pa_proofobligs unfolded">
+        <div class="pa_id">3</div>
+        <div class="prg_proofobligs"></div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <collapse>ooo</collapse>
+   <div class="pa_proofobligs unfolded">
+    <div class="pa_id">7</div>
+    <div class="proofoblig">
+     <div class="Impl" displayIdAttr="-1">
+      <div class="deco">(</div>
+      <div class="f1">
+       <div class="AndN" displayIdAttr="-1">
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">/\</div>
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">></div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">)</div>
+      <div class="deco">&rarr;</div>
+      <div class="deco">(</div>
+      <div class="f2">
+       <div class="AndN" displayIdAttr="-1">
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="Var" displayIdAttr="-1">
+                <div class="v">x</div>
+                <div class="deco">:</div>
+                <div class="t">PSInt</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">&le;</div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="deco">/\</div>
+        <div class="fi">
+         <div class="Atom">
+          <div class="a">
+           <div class="Pred" displayIdAttr="-1">
+            <div class="ts">
+             <div class="FnApp" displayIdAttr="-1">
+              <div class="deco">(</div>
+              <div class="t1">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="opr">&#42;</div>
+              <div class="t2">
+               <div class="FnApp" displayIdAttr="-1">
+                <div class="deco">(</div>
+                <div class="t1">
+                 <div class="Var" displayIdAttr="-1">
+                  <div class="v">x</div>
+                  <div class="deco">:</div>
+                  <div class="t">PSInt</div>
+                 </div>
+                </div>
+                <div class="opr">&#43;</div>
+                <div class="t2">
+                 <div class="Const" displayIdAttr="-1">
+                  <div class="name">1</div>
+                  <div class="deco">:</div>
+                  <div class="tpe">PSInt</div>
+                 </div>
+                </div>
+                <div class="deco">)</div>
+               </div>
+              </div>
+              <div class="deco">)</div>
+             </div>
+            </div>
+            <div class="r">></div>
+            <div class="ts">
+             <div class="Var" displayIdAttr="-1">
+              <div class="v">N</div>
+              <div class="deco">:</div>
+              <div class="t">PSInt</div>
+             </div>
+            </div>
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+      <div class="deco">)</div>
+     </div>
+     <collapse>ooo</collapse>
+     <div class="status">
+      <div class="valid">valid</div>
+     </div>
+    </div>
+    <div class="prg_proofobligs"></div>
+   </div>
+  </div>
+ </div>
+</div>
+</body>
+</html>

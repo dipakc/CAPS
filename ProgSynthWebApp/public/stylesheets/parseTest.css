@@ -1,0 +1,58 @@
+div {
+	float: left;
+	/*padding:0.2em 0.2em;*/
+}
+
+/* parseTest page*/
+.parseForm {
+	clear: both;
+	margin: 2em;
+}
+
+.parseForm .parseTypeCombo {
+	clear: both;
+	margin: 0.1em;
+}
+
+.parseForm .parseInputDiv {
+	clear: both;
+	margin: 0.1em;
+}
+
+.parseForm .parseSubmitDiv {
+	clear: both;
+	margin: 0.1em;
+}
+
+.parseResult {
+	clear: both;
+	margin-left: 2em;
+	color:brown;
+}
+
+.parseResultHeader {
+	clear: both;
+}
+
+.parseForm .mathquill-editable {
+	min-width: 20em;
+}
+
+.parseSentInput {
+	clear: both;
+	margin-left: 2em;
+	color:blue;
+}
+
+.parseResultHeader, .parseSentHeader {
+	font-weight:bold;
+}
+
+hr {
+	color: #C0C0C0;
+	background-color: #C0C0C0;
+	height: 1px;
+	clear: both;
+	margin-left: 2em;
+}
+

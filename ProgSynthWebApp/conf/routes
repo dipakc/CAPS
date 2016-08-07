@@ -1,0 +1,79 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET		/assets/javascripts/routes.js			controllers.Application.jsRoutes
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               	controllers.Assets.at(path="/public", file)
+
+# Home page; Show saved derivations
+GET     /                           	controllers.Application.derivations
+
+
+# Get list of derivations. Serves JSON response
+GET     /getDerivations                	controllers.Application.getDerivations
+
+POST    /rename		                	controllers.Application.rename
+
+POST    /delete		                	controllers.Application.delete
+
+POST    /copy		                	controllers.Application.copy
+
+GET		/getNodeTV/:derivName/:nodeId	controllers.Application.getNodeTV(derivName: String, nodeId: Int)
+
+# OpenDerivations
+GET		/openderivations				controllers.Application.openDerivations
+
+
+GET		/derivation/:derivName			controllers.Application.derivation(derivName: String)
+
+GET     /getState/:derivName        	controllers.Application.getState(derivName: String)
+
+# Gallery
+GET		/galleryDerivations				controllers.Application.galleryDerivations
+
+#user derivations
+#GET		/myDerivations				controllers.Application.myDerivations
+
+POST	/loadGalleryDeriv/:derivName	controllers.Application.loadGalleryDeriv(derivName: String)
+
+POST	/applyTactic/:derivName			controllers.Application.applyTactic(derivName: String)
+
+POST	/editTactic/:derivName			controllers.Application.editTactic(derivName: String)
+
+POST	/setCurNode/:derivName			controllers.Application.setCurNode(derivName: String)
+
+POST	/deleteNode/:derivName			controllers.Application.deleteNode(derivName: String)
+
+#Reset
+POST	/resetTree/:derivName			controllers.Application.resetTree(derivName: String)
+
+POST	/newDerivation					controllers.Application.newDerivation()
+
+GET     /downloadDerivationBin/:derivName	controllers.Application.downloadDerivationBin(derivName: String)
+
+GET     /downloadDerivationTxt/:derivName	controllers.Application.downloadDerivationTxt(derivName: String)
+
+GET		/uploadForm						controllers.Application.uploadForm
+
+POST	/upload							controllers.Application.upload
+
+#POST	/save						controllers.Application.save
+
+# Test pages
+GET     /parsetest                  	controllers.Application.parseTest
+
+POST	/parseTestSubmit				controllers.Application.parseTestSubmit
+
+#Client Logging
+POST	/logClientMsg				controllers.Application.logClientMsg
+
+GET     /login                      controllers.Authentication.login
+POST    /login                      controllers.Authentication.authenticate
+POST    /logout                     controllers.Authentication.logout
+
+ 
+#Debug: disabled for security reasons.
+#GET     /logs/debugLog                      controllers.Application.debugLog
+#POST 	/logs/clearDebugLog					controllers.Application.clearDebugLog

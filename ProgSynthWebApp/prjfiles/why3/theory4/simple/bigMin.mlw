@@ -1,0 +1,18 @@
+
+module BigMin
+
+	use import int.Int
+	(*use import int.MinMax*)
+	use HighOrd as HO
+	use import capsUtil.CapsUtil as CapsUtil
+
+	constant bigMin: (int -> bool) -> (int -> int) -> int
+
+	function min(x y: int): int = if (x > y) then y else x
+	
+	axiom onePoint:
+		forall r: int -> bool, t: int -> int, x: int.
+			one_point r x -> 
+				bigMin r t = t x 
+
+end

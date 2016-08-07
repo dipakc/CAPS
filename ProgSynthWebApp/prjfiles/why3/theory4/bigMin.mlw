@@ -1,0 +1,32 @@
+
+module BigMin
+
+	use import int.Int
+	(*use import int.MinMax*)
+	use HighOrd as HO
+	use import capsUtil.CapsUtil as CapsUtil
+
+	constant bigMin: (int -> bool) -> (int -> int) -> int
+
+	function min(x y: int): int = if (x > y) then y else x
+	
+	axiom onePoint:
+		forall r: int -> bool, t: int -> int, x: int.
+			one_point r x -> 
+				bigMin r t = t x 
+		
+	axiom splitRange:
+		forall r r1 r2: int -> bool, t t1 t2: int -> int.
+			non_empty_range r -> non_empty_range r1 -> non_empty_range r2 ->
+			is_union_of r r1 r2 ->
+			are_same t t1 -> are_same t t2 ->
+				bigMin r t = min (bigMin r1 t1) (bigMin r2 t2)		
+
+	axiom splitRangeRight:
+		forall r r1: int -> bool, t t1 t2: int -> int, v: int.
+			non_empty_range r -> non_empty_range r1 ->
+			is_union_of_v r r1 v ->
+			are_same t t1 -> are_same t t2 ->
+				bigMin r t = min (bigMin r1 t1) (t2 v)
+				
+end

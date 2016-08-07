@@ -1,0 +1,5 @@
+package xhtmlviews
+
+object XHtmlViews {
+
+}

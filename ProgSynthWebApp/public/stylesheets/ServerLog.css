@@ -1,0 +1,62 @@
+div {
+	display:block;
+	float:left;
+	clear:left;
+}
+
+.Section {
+	border:0.1em solid;
+	background-color: F8BC76;/*85C1F5;*/	
+	/*border-radius:0.4em;*/
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	margin-top: 0.2em;
+}
+
+
+.Section > .SectionTitle {
+	background-color: 6C9FEC;/*4C7FAC;*/
+	padding-left: 0.2em;
+	/*border:0.1em solid;*/
+	/*border-radius:0.3em;	*/
+}
+
+
+.Section > .SectionBody {
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+	padding-bottom: 0.2em;
+}
+
+.SectionBody > .MessageBody {
+	margin-left: 0.5em;
+}
+
+.Section.Collapsed  >.SectionTitle{
+	background-color: 7FCA9F;
+}
+
+.Section.Collapsed  >.SectionBody{
+	display:none;
+}
+
+.LogInfo, .StartDate, .EndDate, .Date, .Duration {
+	display:none;
+}
+
+.MessageBody {
+}
+.PSList {
+}
+
+.PSListItem {
+	clear:none;
+	padding-right: 1em;
+	padding-left: 0.2em;
+}
+
+.MessageBody {
+	padding: 0.2em;
+	margin: 0.1em;
+	background-color: E1AB60;
+}

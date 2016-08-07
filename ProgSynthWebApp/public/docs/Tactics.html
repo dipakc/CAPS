@@ -1,0 +1,1239 @@
+<html>
+   	     <head>
+   			<link rel="stylesheet" type="text/css" href="tactics.css"> </link>
+			<link rel="stylesheet" type="text/css" href="../javascripts/lib/Semantic-UI-CSS/semantic.min.css"> </link>
+   		</head>
+   		<body>
+			<div id="sidebar">
+				<div>
+			<h3 class="ui header ProgTactics"> Program Tactics </h3>
+			<div class="ui celled list">
+                <div class="item"><a href="#AssumePre">AssumePre</a></div><div class="item"><a href="#AssumeToIf">AssumeToIf</a></div><div class="item"><a href="#CollapseCompositions">CollapseCompositions</a></div><div class="item"><a href="#DeleteConjunct">DeleteConjunct</a></div><div class="item"><a href="#GuessGuard">GuessGuard</a></div><div class="item"><a href="#Init4">Init4</a></div><div class="item"><a href="#InsertVariable">InsertVariable</a></div><div class="item"><a href="#IntroAssignment">IntroAssignment</a></div><div class="item"><a href="#IntroAssignmentEnd">IntroAssignmentEnd</a></div><div class="item"><a href="#IntroIf">IntroIf</a></div><div class="item"><a href="#IntroSwap">IntroSwap</a></div><div class="item"><a href="#PropagateAssertionsDownSP">PropagateAssertionsDownSP</a></div><div class="item"><a href="#PropagateAssumeUp">PropagateAssumeUp</a></div><div class="item"><a href="#RTVInPost">RTVInPost</a></div><div class="item"><a href="#RTVInPost2">RTVInPost2</a></div><div class="item"><a href="#StepIntoBA">StepIntoBA</a></div><div class="item"><a href="#StepIntoIFBA">StepIntoIFBA</a></div><div class="item"><a href="#StepIntoSubProg">StepIntoSubProg</a></div><div class="item"><a href="#StepIntoUnknownProgIdx">StepIntoUnknownProgIdx</a></div><div class="item"><a href="#StrengthenInvariant">StrengthenInvariant</a></div><div class="item"><a href="#StrengthenPostSP">StrengthenPostSP</a></div><div class="item"><a href="#WhileStrInvSP">WhileStrInvSP</a></div>
+			</div>
+
+            <h3 class="ui header FormulaTactics"> Formula Tactics </h3>
+			<div class="ui celled list">
+                <div class="item"><a href="#Distributivity">Distributivity</a></div><div class="item"><a href="#EmptyRange">EmptyRange</a></div><div class="item"><a href="#InstantiateMeta">InstantiateMeta</a></div><div class="item"><a href="#OnePoint">OnePoint</a></div><div class="item"><a href="#QDistributivity">QDistributivity</a></div><div class="item"><a href="#RangeSplit">RangeSplit</a></div><div class="item"><a href="#ReplaceFormula">ReplaceFormula</a></div><div class="item"><a href="#ReplaceSubFormula">ReplaceSubFormula</a></div><div class="item"><a href="#ReplaceSubTerm">ReplaceSubTerm</a></div><div class="item"><a href="#SimplifyAutoTactic">SimplifyAutoTactic</a></div><div class="item"><a href="#Simplify">Simplify</a></div><div class="item"><a href="#SplitoutBoundVariable">SplitoutBoundVariable</a></div><div class="item"><a href="#StepIntoSubFormula">StepIntoSubFormula</a></div><div class="item"><a href="#TradingMoveToTerm">TradingMoveToTerm</a></div>
+			</div>
+
+            <h3 class="ui header OtherTactics"> Other Tactics </h3>
+			<div class="ui celled list">
+                <div class="item"><a href="#StepOut">StepOut</a></div>
+			</div>
+		</div>
+			</div>
+			<div id="contentpanel">
+		        <div class="ProgTactics">
+					<h2 class="ui header">Program Tactics</h2>
+   					<div class="TacticDoc" id="AssumePre">
+   			<div class="TacticName">AssumePre</div>
+   			<div class="TacticDesc">Assumes a precondition in a formula mode.
+									An UnknownProg is created on stepout to establish the precondition.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Fresh Variables:  </span>
+    		    				<span class="ptype">List[Var]</span>
+    		    				<span class="pdesc">Fresh variables to be introduced.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Assumed Precondition:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">A precondition to be assumed.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div><div>
+								<li>Head node should be part of &quot;If&quot; program derivation</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="AssumeToIf">
+   			<div class="TacticName">AssumeToIf</div>
+   			<div class="TacticDesc">Introduces an IF program construct</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">displayId:  </span>
+    		    				<span class="ptype">Integer</span>
+    		    				<span class="pdesc">Assume program Id</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a Program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes"><div class="THeader">Notes</div><ul><div>
+								<li>Introduces an IF program construct to establish the assumption</li>
+							</div>
+    		       	</ul>
+    		</div>
+
+    	</div><div class="TacticDoc" id="CollapseCompositions">
+   			<div class="TacticName">CollapseCompositions</div>
+   			<div class="TacticDesc">Collapses all the nested compositions</div>
+   			<div class="TacticInputs"> 
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a a program with atleast one nested composition</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="DeleteConjunct">
+   			<div class="TacticName">DeleteConjunct</div>
+   			<div class="TacticDesc">Introduces a while loop by applying the &quot;Delete Conjuct&quot; heuristics</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Conjuct:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">Conjuct to be deleted to get the invariant.
+		            Negation of this conjuct becomes the guard of the while loop</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Variant:  </span>
+    		    				<span class="ptype">Integer Term</span>
+    		    				<span class="pdesc">Variant of the while loop.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				<div>
+   						<div class="THeader">Transformation Details</div>
+   						<div class="transfDiv content">
+				<div>
+			<table border="1" class="tablestyle">
+				<tr><th colspan="2">DeleteConjunct</th></tr>
+				<tr><th align="left">Conjuct</th><td><div class="Var Term" displayIdAttr="-1">
+					<div class="v">C</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></td></tr>
+				<tr><th align="left">Variant</th><td><div class="Var Term" displayIdAttr="-1">
+					<div class="v">V</div>
+					<div class="deco">:</div>
+					<div class="t">PSInt</div>
+				</div></td></tr>
+			</table>
+			<div><div><a class="docLink" href="../assets/docs/Tactics.html#DeleteConjunct" target="_blank">doc</a></div></div>
+		</div>
+				<div class="inputnode">
+				<collapse>ooo</collapse><div class="ProgramAnn unfolded UnknownProgAnn ShowPre ShowPost" displayIdAttr="-1">
+					<div class="id">1</div>
+					<div class="displayId">-1</div>
+					<div class="pre"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">A</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+		</div></div>
+					<div class="program"><div class="UnknownProg">UnknownProg(1)</div></div>
+					<div class="post"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="FnApp Term" displayIdAttr="-1">
+						<div class="t1"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+						<div class="opr ampamp">&and;</div>
+						<div class="t2"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">C</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+			</div></div>
+		</div></div>
+				</div>
+	        	</div>
+				<div class="outputnode">
+				<collapse>ooo</collapse><div class="ProgramAnn unfolded CompositionAnn ShowPost" displayIdAttr="-1">
+					<div class="id">5</div>
+					<div class="displayId">-1</div>
+					<div class="pre"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">A</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+		</div></div>
+					<div class="program"><div class="Composition">
+				<div class="programs"><collapse>ooo</collapse><div class="ProgramAnn unfolded UnknownProgAnn ShowPost" displayIdAttr="-1">
+					<div class="id">2</div>
+					<div class="displayId">-1</div>
+					<div class="pre"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">A</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+		</div></div>
+					<div class="program"><div class="UnknownProg">UnknownProg(2)</div></div>
+					<div class="post"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+		</div></div>
+				</div><collapse>ooo</collapse><div class="ProgramAnn unfolded WhileProgAnn ShowPost" displayIdAttr="-1">
+					<div class="id">4</div>
+					<div class="displayId">-1</div>
+					<div class="pre"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+		</div></div>
+					<div class="program"><div class="WhileProg">
+				<div class="CapsKeyword">while </div>
+				<div class="loopInv"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+				<div class="grdcmds"><div class="GuardedCmd">
+			<div class="guard-arrow">
+				<div class="guard"><div class="FnApp Term" displayIdAttr="-1">
+				<div class="afn"><div class="fn">
+				<div class="name">&not;</div>
+			</div></div>
+				<div class="bracket_scroll_mode"><div class="ts"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">C</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div></div>
+			</div></div>
+				<div class="CapsKeyword">&mdash;&mdash;&rarr;</div>
+			</div>
+			<div class="cmd"><collapse>ooo</collapse><div class="ProgramAnn unfolded UnknownProgAnn ShowPost" displayIdAttr="-1">
+					<div class="id">3</div>
+					<div class="displayId">-1</div>
+					<div class="pre"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="FnApp Term" displayIdAttr="-1">
+						<div class="t1"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+						<div class="opr ampamp">&and;</div>
+						<div class="t2"><div class="FnApp Term" displayIdAttr="-1">
+				<div class="afn"><div class="fn">
+				<div class="name">&not;</div>
+			</div></div>
+				<div class="bracket_scroll_mode"><div class="ts"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">C</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div></div>
+			</div></div>
+			</div></div>
+		</div></div>
+					<div class="program"><div class="UnknownProg">UnknownProg(3)</div></div>
+					<div class="post"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+		</div></div>
+				</div></div>
+		</div></div>
+			</div></div>
+					<div class="post"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="FnApp Term" displayIdAttr="-1">
+						<div class="t1"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+						<div class="opr ampamp">&and;</div>
+						<div class="t2"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">C</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+			</div></div>
+		</div></div>
+				</div></div>
+			</div></div>
+					<div class="post"><div class="Invariant" displayIdAttr="-1">
+			<div class="loc">None</div>
+			<div class="term"><div class="FnApp Term" displayIdAttr="-1">
+						<div class="t1"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">B</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+						<div class="opr ampamp">&and;</div>
+						<div class="t2"><div class="Var Term" displayIdAttr="-1">
+					<div class="v">C</div>
+					<div class="deco">:</div>
+					<div class="t">PSBool</div>
+				</div></div>
+			</div></div>
+		</div></div>
+				</div>
+	        	</div>
+			</div>
+   					</div>
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="GuessGuard">
+   			<div class="TacticName">GuessGuard</div>
+   			<div class="TacticDesc">Guess a guard in the formula mode.
+									Strengthens the already existing guard with the new guard.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Guard:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">Guard to be added to the already existing guard</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div><div>
+								<li>Guard should be a valid program expression</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="Init4">
+   			<div class="TacticName">Init4</div>
+   			<div class="TacticDesc">Tactic used to specify the program to be derived</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Derivation Name:  </span>
+    		    				<span class="ptype">String</span>
+    		    				<span class="pdesc">Name of the derivation</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Constants:  </span>
+    		    				<span class="ptype">List[String]</span>
+    		    				<span class="pdesc">List of the constants</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Variables:  </span>
+    		    				<span class="ptype">List[String]</span>
+    		    				<span class="pdesc">List of the variables</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Global Invariants:  </span>
+    		    				<span class="ptype">List[Formula]</span>
+    		    				<span class="pdesc">Invariants that should hold through out the program.
+		            Typically the assertions involving constants.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Precondition:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">Precondition of the program</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Postcondition:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">Postcondition of the program</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be the root node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="InsertVariable">
+   			<div class="TacticName">InsertVariable</div>
+   			<div class="TacticDesc">Introduce a variable declaration before the active program.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">New variable:  </span>
+    		    				<span class="ptype">Var</span>
+    		    				<span class="pdesc">A new variable to be introduced.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Initial value:  </span>
+    		    				<span class="ptype">Term</span>
+    		    				<span class="pdesc">Initial value to be assigned to the new variable</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node</li>
+							</div><div>
+								<li>Variable name should be fresh</li>
+							</div><div>
+								<li>The initial value should be of same type as that of the variable type </li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="IntroAssignment">
+   			<div class="TacticName">IntroAssignment</div>
+   			<div class="TacticDesc">Introduce an assignment program</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Variable and term pairs:  </span>
+    		    				<span class="ptype">List[(Var, Program Term)]</span>
+    		    				<span class="pdesc">Variables and the correpsonding program expressions that should be assigned to the variables.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>The head node should be an UnknownProg.</li>
+							</div><div>
+								<li>The variables should be already defined.</li>
+							</div><div>
+								<li>The term should be valid program expressions.</li>
+							</div><div>
+								<li>The proof obligation for the assignment statement should be valid.</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="IntroAssignmentEnd">
+   			<div class="TacticName">IntroAssignmentEnd</div>
+   			<div class="TacticDesc">Introduces an unknown program and the given assignment program</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Variable and term pairs:  </span>
+    		    				<span class="ptype">List[(Var, Program Term)]</span>
+    		    				<span class="pdesc">Variables and the correpsonding program expressions that should be assigned to the variables.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>The head node should be an UnknownProg</li>
+							</div><div>
+								<li>The variables should be already declared</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="IntroIf">
+   			<div class="TacticName">IntroIf</div>
+   			<div class="TacticDesc">Introduces an IF program construct</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">guards:  </span>
+    		    				<span class="ptype">List[Formula]</span>
+    		    				<span class="pdesc">List of guards in the IF program</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be an Unknown Program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes"><div class="THeader">Notes</div><ul><div>
+								<li>If the given guards do not cover all the cases, then additional guarded commands can be derived using the StepIntoIFBA tactic.</li>
+							</div>
+    		       	</ul>
+    		</div>
+
+    	</div><div class="TacticDoc" id="IntroSwap">
+   			<div class="TacticName">IntroSwap</div>
+   			<div class="TacticDesc">Introduce an Array swap statement</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Array Variable:  </span>
+    		    				<span class="ptype">Array</span>
+    		    				<span class="pdesc">Array whose elements are to be swapped.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">index1:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">First index</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">index2:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Second index</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>The head node should be an UnknownProg.</li>
+							</div><div>
+								<li>The proof obligation for the array swap statement should be valid.</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="PropagateAssertionsDownSP">
+   			<div class="TacticName">PropagateAssertionsDownSP</div>
+   			<div class="TacticDesc">Propagate assertions down</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">displayId1:  </span>
+    		    				<span class="ptype">Integer</span>
+    		    				<span class="pdesc">Display Id of the first program</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">displayId2:  </span>
+    		    				<span class="ptype">Integer</span>
+    		    				<span class="pdesc">Display Id of the first program</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node.</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes"><div class="THeader">Notes</div><ul><div>
+								<li>Propagates the pre of the subprogram with displayId1 to the post of the subprogram with displayId2</li>
+							</div>
+    		       	</ul>
+    		</div>
+
+    	</div><div class="TacticDoc" id="PropagateAssumeUp">
+   			<div class="TacticName">PropagateAssumeUp</div>
+   			<div class="TacticDesc">Propages assume statements upwards</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">displayId:  </span>
+    		    				<span class="ptype">Integer</span>
+    		    				<span class="pdesc">Display Id of the Assume statement to be propagated.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="RTVInPost">
+   			<div class="TacticName">RTVInPost</div>
+   			<div class="TacticDesc">Replaces a term in the postcondition by a new variable.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Term to be replaced:  </span>
+    		    				<span class="ptype">Term</span>
+    		    				<span class="pdesc">Term to be replaced by a fresh variable.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">New Variable:  </span>
+    		    				<span class="ptype">Var</span>
+    		    				<span class="pdesc">A new variable which will replace the term.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Initial value:  </span>
+    		    				<span class="ptype">Term</span>
+    		    				<span class="pdesc">Initial value for the variable.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Bounds:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">Bounds on the new variable.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="RTVInPost2">
+   			<div class="TacticName">RTVInPost2</div>
+   			<div class="TacticDesc">Replaces a specific occurrence of a term in the postcondition by a new variable.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">DisplayId of a term in postcondition:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">DisplayId of the term to be replaced by a fresh variable</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">New Variable:  </span>
+    		    				<span class="ptype">Var</span>
+    		    				<span class="pdesc">A new variable which will replace the term.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Initial value:  </span>
+    		    				<span class="ptype">Term</span>
+    		    				<span class="pdesc">Initial value for the variable.</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Bounds:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">Bounds on the new variable.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="StepIntoBA">
+   			<div class="TacticName">StepIntoBA</div>
+   			<div class="TacticDesc">Steps into Before-After predicate for the program</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">lhsVars:  </span>
+    		    				<span class="ptype">List[Var]</span>
+    		    				<span class="pdesc">List of lvariables in the desired program</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be an UnknownProgram node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes"><div class="THeader">Notes</div><ul><div>
+								<li>In the formula mode, use GuessGuard tactic to guess the guards of the &quot;If&quot;. If no guards are guessed then assignment program is constructed on Stepout. </li>
+							</div><div>
+								<li>Use InstantiateMeta tactic to instantiate the meta variables</li>
+							</div><div>
+								<li>You can stepout even when you have not instantiated all the metavariables.In this case, an unknown program is created before the synthesized program to establish the remaining metavariables</li>
+							</div>
+    		       	</ul>
+    		</div>
+
+    	</div><div class="TacticDoc" id="StepIntoIFBA">
+   			<div class="TacticName">StepIntoIFBA</div>
+   			<div class="TacticDesc">Steps into Before-After predicate of the IF program. Used to derive additional guarded commands.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">lhsVars:  </span>
+    		    				<span class="ptype">List[Var]</span>
+    		    				<span class="pdesc">List of lvariables in the desired guarded commands</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be If Program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes"><div class="THeader">Notes</div><ul><div>
+								<li>This tactic is useful when the guards of a If program do not cover all the cases and you want to derive additional guarded commands.</li>
+							</div><div>
+								<li>Derived guarded commands are added to the if construct on stepout.</li>
+							</div><div>
+								<li>Use InstantiateMeta tactic to instantiate the meta variables</li>
+							</div><div>
+								<li>You can stepout even when you have not instantiated all the metavariables. In this case, an unknown program is created before the synthesized program to establish the remaining metavariables</li>
+							</div>
+    		       	</ul>
+    		</div>
+
+    	</div><div class="TacticDoc" id="StepIntoSubProg">
+   			<div class="TacticName">StepIntoSubProg</div>
+   			<div class="TacticDesc">Step into the subprogram with given display id.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">DisplayId:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">DisplayId of the subprogram</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node</li>
+							</div><div>
+								<li>DisplayId should a valid program display id.</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="StepIntoUnknownProgIdx">
+   			<div class="TacticName">StepIntoUnknownProgIdx</div>
+   			<div class="TacticDesc">Steps into the &quot;Idx&quot;th UnknwonProgram</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Idx of the formula:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Idx of the formula</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="StrengthenInvariant">
+   			<div class="TacticName">StrengthenInvariant</div>
+   			<div class="TacticDesc">Strengthens invariant of a while loop</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Additional Loop Invariants:  </span>
+    		    				<span class="ptype">List[Formula]</span>
+    		    				<span class="pdesc">Additional loop invariants for the while loop.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a While program node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="StrengthenPostSP">
+   			<div class="TacticName">StrengthenPostSP</div>
+   			<div class="TacticDesc">Strengthens the post of the program with strongest postcondition.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">displayId:  </span>
+    		    				<span class="ptype">Integer</span>
+    		    				<span class="pdesc">Display if of the program</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a todo</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes"><div class="THeader">Notes</div><ul><div>
+								<li> Strengthens the post of the program with strongest postcondition.</li>
+							</div><div>
+								<li>Updates the pre and post of all the intermediate programs.</li>
+							</div>
+    		       	</ul>
+    		</div>
+
+    	</div><div class="TacticDoc" id="WhileStrInvSP">
+   			<div class="TacticName">WhileStrInvSP</div>
+   			<div class="TacticDesc">Propagate the assume statement at end the while body and then strengthen the invariant</div>
+   			<div class="TacticInputs"> 
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a while program</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div>
+   				</div>
+
+		        <div class="FormulaTactics">
+					<h2 class="ui header">Formula Tactics</h2>
+	        	    <div class="TacticDoc" id="Distributivity">
+   			<div class="TacticName">Distributivity</div>
+   			<div class="TacticDesc">Distributivity</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Id of the formula:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the formula to which the tactic is to be applied.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="EmptyRange">
+   			<div class="TacticName">EmptyRange</div>
+   			<div class="TacticDesc">EmptyRange</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Id of the formula:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc"></span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="InstantiateMeta">
+   			<div class="TacticName">InstantiateMeta</div>
+   			<div class="TacticDesc">Instantiate the meta variables</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Meta variables and term pairs:  </span>
+    		    				<span class="ptype">List[(Var, Term)]</span>
+    		    				<span class="pdesc">Meta variables and corresponding instantiation terms</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node.</li>
+							</div><div>
+								<li>The metavariable should be present in the context variables.</li>
+							</div><div>
+								<li>the context assumptions should be metavariable free</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="OnePoint">
+   			<div class="TacticName">OnePoint</div>
+   			<div class="TacticDesc">OnePoint</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Id of the formula:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the quantified formula</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="QDistributivity">
+   			<div class="TacticName">QDistributivity</div>
+   			<div class="TacticDesc">QDistributivity</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Id of the formula:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the quantified formula</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="RangeSplit">
+   			<div class="TacticName">RangeSplit</div>
+   			<div class="TacticDesc">RangeSplit</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Id of the formula:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the quantified formula</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="ReplaceFormula">
+   			<div class="TacticName">ReplaceFormula</div>
+   			<div class="TacticDesc">Replace a formula with equivalent formula.</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">New formula:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">New equivalent formula.</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node.</li>
+							</div><div>
+								<li>The head formula and the new formula should be equivalent.</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="ReplaceSubFormula">
+   			<div class="TacticName">ReplaceSubFormula</div>
+   			<div class="TacticDesc">Replaces a subformula with an equivalent formula</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">oldSubFId:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the subformula to be replaced</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">newSubF:  </span>
+    		    				<span class="ptype">Formula</span>
+    		    				<span class="pdesc">new formula</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div><div>
+								<li>oldSubF should be equivalent to the newSubF under the given context</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes"><div class="THeader">Notes</div><ul><div>
+								<li>The context of the subformula is not used for checking the equivalence.</li>
+							</div>
+    		       	</ul>
+    		</div>
+
+    	</div><div class="TacticDoc" id="ReplaceSubTerm">
+   			<div class="TacticName">ReplaceSubTerm</div>
+   			<div class="TacticDesc">Replaces a subterm with an equivalent term</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">subTermId:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Display id of the subterm to be replaced</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">newSubTerm:  </span>
+    		    				<span class="ptype">Term</span>
+    		    				<span class="pdesc">New subterm</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node.</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="SimplifyAutoTactic">
+   			<div class="TacticName">SimplifyAutoTactic</div>
+   			<div class="TacticDesc"></div>
+   			<div class="TacticInputs"> 
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li></li>
+							</div><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="Simplify">
+   			<div class="TacticName">Simplify</div>
+   			<div class="TacticDesc">Simplifies the formula by eliminating &quot;True&quot; and &quot;False&quot; subformulas </div>
+   			<div class="TacticInputs"> 
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="SplitoutBoundVariable">
+   			<div class="TacticName">SplitoutBoundVariable</div>
+   			<div class="TacticDesc">Splitout a bound variable from the given quantified term</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">displayId:  </span>
+    		    				<span class="ptype">Integer</span>
+    		    				<span class="pdesc">Display id of the target term</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">boundVar:  </span>
+    		    				<span class="ptype">Integer</span>
+    		    				<span class="pdesc">Bound variable</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a quantified formula</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="StepIntoSubFormula">
+   			<div class="TacticName">StepIntoSubFormula</div>
+   			<div class="TacticDesc">StepIntoSubFormula</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">subId:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the subformula</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div><div class="TacticDoc" id="TradingMoveToTerm">
+   			<div class="TacticName">TradingMoveToTerm</div>
+   			<div class="TacticDesc">TradingMoveToTerm</div>
+   			<div class="TacticInputs"> <div class="THeader">Input Parameters</div><ul><li>
+    		    			<div>
+    		    				<span class="param">Id of the formula:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the quantified formula</span>
+    		    			</div>
+    		    			</li><li>
+    		    			<div>
+    		    				<span class="param">Id of the formula to be moved:  </span>
+    		    				<span class="ptype">Int</span>
+    		    				<span class="pdesc">Id of the subformula that needs to be moved from Range to the Term</span>
+    		    			</div>
+    		    			</li>
+	   				</ul>
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>Head node should be a formula node</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div>
+				</div>
+
+        		<div class="OtherTactics">
+					<h2 class="ui header">Other Tactics</h2>
+        	        <div class="TacticDoc" id="StepOut">
+   			<div class="TacticName">StepOut</div>
+   			<div class="TacticDesc">StepOut</div>
+   			<div class="TacticInputs"> 
+    		</div>
+   			<div class="TransfDiv">
+   				
+   			</div>
+    		<div class="AppConditions"> <div class="THeader">Applicability Conditions</div><ul><div>
+								<li>There should be some ancestor StepIn node that is not yet stepped out.</li>
+							</div>
+    		       	</ul>
+    		</div>
+    		<div class="Notes">
+    		</div>
+
+    	</div>
+				</div>
+			</div>
+   		</body>
+   		</html>

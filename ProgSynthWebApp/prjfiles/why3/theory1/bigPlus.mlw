@@ -1,0 +1,76 @@
+
+module BigPlus
+
+  use import int.Int
+  (* use import int.MinMax *)
+  use HighOrd as HO
+
+  function bigPlus (a b: int)(r: int -> bool)(f: int -> int): int
+
+  function plus(x y: int): int = x + y
+
+  (*
+  predicate bounded_by (r: int -> bool)(a b:int) (f:int -> int) (m:int) =
+    forall x. r x /\ a <= x < b -> (f x) <= m
+
+	
+  axiom bigPlus_def: 
+    forall r: int -> bool, a b:int, f:int -> int, m:int.
+      (exists i: int. r i /\ a <= i < b) ->
+      (bigPlus r a b f = m <->
+         bounded_by r a b f m /\
+         (forall m'. bounded_by r a b f m' -> m <= m'))
+
+  meta "rewrite" prop bigPlus_def
+  *)
+  predicate non_empty_range(a b: int) (r: int -> bool) =
+    (exists i: int. r i /\ a <= i < b)
+  
+  predicate empty_range(a b: int)(r: int -> bool) = 
+	not(non_empty_range a b r)
+    
+  predicate in_range(a b: int) (r: int -> bool) (x: int)= 
+	r x /\ a <= x < b
+  
+  predicate one_point(a b: int) (r: int -> bool) (x: int) = 
+	in_range a b r x /\ (forall i: int. in_range a b r i -> i = x)
+
+  axiom indRight:
+  forall r: int -> bool, a b: int, f: int -> int.    
+	  non_empty_range a (b + 1) r ->
+	  non_empty_range a b r ->
+       bigPlus a (b + 1) r f = 
+          if r b then plus (bigPlus a b r f) (f b) else (bigPlus a b r f)
+
+
+  axiom indLeft:
+  forall r: int -> bool, a b: int, f: int -> int.    
+	  non_empty_range a b r ->
+	  non_empty_range (a + 1) b r ->
+       bigPlus a b r f = 
+          if r a then plus (f a) (bigPlus (a + 1) b r f) else (bigPlus (a + 1) b r f)
+
+  axiom splitRange:
+    forall a m b: int, r: int -> bool, f: int -> int.
+		non_empty_range a b r ->
+		non_empty_range a m r ->
+		non_empty_range m b r ->	
+        bigPlus a b r f = plus (bigPlus a m r f) (bigPlus m b r f)
+
+  axiom onePoint:
+  forall r: int -> bool, a b x: int, f: int -> int.    
+    one_point a b r x ->
+      bigPlus a b r f = f x
+		
+  axiom onePoint1:
+  forall r: int -> bool, a b: int, f: int -> int.    
+    r a -> a + 1 = b ->
+      bigPlus a b r f = f a
+
+  axiom emptyRange:
+  forall r: int -> bool, a b: int, f: int -> int.    
+    empty_range a b r ->
+      bigPlus a b r f = 0
+
+end
+

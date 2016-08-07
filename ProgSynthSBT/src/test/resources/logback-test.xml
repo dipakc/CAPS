@@ -1,0 +1,39 @@
+
+<!-- After changing the config, run tests from SBT prompts before running from Scala-IDE. -->
+<configuration>
+
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>%coloredLevel %logger{15} - %message%n%xException{5}</pattern>
+    </encoder>
+  </appender>
+
+  <!-- To be used for the test logs-->
+ <appender name="SIFT" class="ch.qos.logback.classic.sift.SiftingAppender">
+    <!-- in the absence of the class attribute, it is assumed that the
+         desired discriminator type is
+         ch.qos.logback.classic.sift.MDCBasedDiscriminator -->
+    <discriminator>
+      <key>testname</key>
+      <defaultValue>unknown</defaultValue>
+    </discriminator>
+    <sift>
+      <appender name="FILE-${testname}" class="ch.qos.logback.core.FileAppender">
+        <file>./testlogs/${testname}.log</file>
+        <append>false</append>
+	    <encoder>
+    	  <pattern>%logger %level %date ::: %msg%n</pattern>
+    	</encoder>
+      </appender>
+    </sift>
+  </appender>
+ 
+  <!-- To be used for the test logs-->
+  <logger name="progsynth" level="TRACE" additivity="false">
+  	<appender-ref ref="SIFT" />
+  </logger>
+        
+  <root level="TRACE">
+  </root>
+
+</configuration>

@@ -1,0 +1,378 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="CAPSUserDoc.css"> </link>
+    <link rel="stylesheet" type="text/css" href="../javascripts/lib/Semantic-UI-CSS/semantic.min.css"> </link>
+
+	<link rel="stylesheet" type="text/css" href="../stylesheets/mathquill/mathquill.css">
+	<script src="../javascripts/lib/jquery-1.7.1.min.js"></script>	
+	<script src="../javascripts/lib/mathquill/mathquill.min.js" defer></script>
+
+    <title>CAPS: User Guide</title>
+</head>
+
+<body id="UserGuide">
+
+    <div id="leftsidebar">
+        <div class="toc">
+            <div class="hindex2"><a href="#WhatIsCaps">What is CAPS?</a></div>
+            <div class="hindex2"><a href="#DerivationMethodology">Derivation Methodology</a></div>
+            <div class="hindex2"><a href="#RelatedPublications">Related Publications</a>
+            </div>
+            <div class="hindex2"><a href="#Installation">Installation</a>
+                <div class="hindex3"><a href="#Prerequisites">Prerequisites</a></div>
+                <div class="hindex3"><a href="#Why3Install">Why3 Installation</a></div>
+                <div class="hindex3"><a href="#Z3Install">Z3 Installation</a></div>
+                <div class="hindex3"><a href="#ConfigureWhy3">Configure why3 to detect provers</a></div>
+                <div class="hindex3"><a href="#CAPSInstall">CAPS Installation</a></div>
+            </div>
+            <div class="hindex2"><a href="#Usage">Usage</a>
+                <div class="hindex3"><a href="#StartDeriv">Starting the derivation</a></div>
+                <div class="hindex3"><a href="#DerivIf">Deriving "If" program construt </a></div>
+                <div class="hindex3"><a href="#PropAssumption">Propagating Assumptions </a></div>
+                <div class="hindex3"><a href="#StepSubProg">Stepping into subprograms</a></div>
+                <div class="hindex3"><a href="#StepSubFormula">Stepping into subformulas</a></div>
+                <div class="hindex3"><a href="#SimplifyAuto">SimplifyAuto tactic</a></div>
+                <div class="hindex3"><a href="#LogicalOpr">Input commands for logical operators</a></div>
+                <div class="hindex3"><a href="#ArithOpr">Input commands for arithmetic operators</a></div>
+            </div>
+        </div>
+    </div>
+    <div id="contentwrapper">
+        <div id="rightcontent">
+        <h1 class="ui header">CAPS: Calculational Assistant for Programming from Specifications</h1>
+
+        <h2 class="ui header" id='WhatIsCaps'>What is CAPS?</h2>
+        <p>
+            CAPS is a system for the derivation of imperative programs from formal specifications. The system provides a tactic based framework for carrying out program as well as formula transformations in a coherent way. It automates the mundane formula manipulation tasks by employing automated theorem provers.
+        </p>
+
+        <h2 class="ui header" id='DerivationMethodology'>Derivation Methodology</h2>
+        <p> While developing program in CAPS, at every stage, there is always a correct-by-construction partial program with some unknown subprograms, as shown in the example in Figure 1.
+        </p>
+
+       
+    <div class="figure">
+        <p><img src="./images/MaxSegSumExample2.png" alt="Max SegSum Example image" title="Max Segment Sum Example" align="left" width="800px">
+        </p>
+        <p><span class="figure-number">Figure 1:</span> Sketch of an example derivation (maximum segment sum problem)</p>
+    </div>      
+       
+        <p> All program constructs in the system, including the unknown subprograms have associated pre- and post-conditions. Program constructs are introduced only when logical manipulations show them to be sufficient for maintaining the correctness. For example, in Figure 1(c), variable <span class="mathquill-embedded-latex">r</span> needs to be modified in the loop body to maintain the loop invariant <span class="mathquill-embedded-latex">P_{0}</span>. The required update for <span class="mathquill-embedded-latex">r</span> naturally follows from the simplification of the correctness proof obligations. An important feature of our system is that a user cannot construct an incorrect program in it. Apart from the fully annotated derived program, the system also maintains the derivation tree which reproduces the complete derivation process and provides opportunities for exploring the alternative solutions by backtracking and branching.</p>
+
+        <h2 class="ui header" id='RelatedPublications'>Related Publications</h2>
+
+        <h4 class="ui header">Theoretical Foundations</h4>
+
+        <ul>
+            <li>Automated Theorem Prover Assisted Program Calculations - Dipak L. Chaudhari and Om P. Damani. The 11th International Conference on Integrated Formal Methods, IFM 2014.</li>
+            <li>Combining Top-down and Bottom-up Techniques in Program Derivation - Dipak L. Chaudhari and Om Damani. 25th International Symposium on Logic-Based Program Synthesis and Transformation LOPSTR 2015</li>
+        </ul>
+
+        <h4 class="ui header">System Building Aspect</h4>
+
+        <ul>
+            <li>Building an IDE for the Calculational Derivation of Imperative Programs - Dipak L. Chaudhari and Om P. Damani. Second Workshop on Formal-IDE, F-IDE 2015</li>
+        </ul>
+
+        <h4 class="ui header">Educational Usage</h4>
+
+        <ul>
+            <li>Introducing Formal Methods via Program Derivation - Dipak L. Chaudhari and Om P. Damani. 20th Annual Conference on Innovation and Technology in Computer Science Education, ITiCSE 2015</li>
+        </ul>
+
+        <h2 class="ui header" id='Installation'>Installation</h2>
+
+        <h3 class="ui header" id='Prerequisites'>Prerequisites</h3>
+        <ul>
+            <li>Linux</li>
+            <li>Google Chrome Browser</li>
+            <li>Java runtime environment</</li>
+                <li>
+                    Why3 verification framework
+                    <p>As a part of the Why3 installation, you will also need to install the external provers. Following external provers are supported.</p>
+                    <ul>
+                        <li>Z3</li>
+                        <li>Alt-Ergo</li>
+                        <li>CVC3</li>
+                        <li>SPASS</li>
+                    </ul>
+                    <p>At least one of these theorem provers needs to be installed. We recommend Z3 since CAPS can also connect to Z3 directly.</p>
+                </li>
+        </ul>
+
+        <h3 class="ui header" id='Why3Install'>Why3 Installation</h3>
+        <p>
+            The following instructions should work. In case of problems, please refer detailed installation instructions at the Why3 homepage <a href="http://why3.lri.fr/">http://why3.lri.fr/</a>.
+
+            <div class="ui list">
+                <div class="item">
+                    <div class="header">Install Ocaml and libraries</div>
+                    http://why3.lri.fr/doc-0.81/manual006.html#sec38
+
+                    <pre class='block'>
+sudo apt-get install ocaml ocaml-native-compilers
+sudo apt-get install liblablgtk2-ocaml-dev liblablgtksourceview2-ocaml-dev libocamlgraph-ocaml-dev
+    </pre>
+
+                </div>
+                <div class="item">
+                    <div class="header">Install Why3</div>
+                    <pre class='block'>
+    wget https://gforge.inria.fr/frs/download.php/file/33491/why3-0.81.tar.gz
+    tar -xzf why3-0.81.tar.gz
+    cd why3-0.81/
+    ./configure
+    </pre>
+                    <pre class='block'>
+    wget https://gforge.inria.fr/frs/download.php/file/35214/why3-0.86.2.tar.gz
+    tar -xzf why3-0.86.2.tar.gz
+    cd why3-0.86.2/
+    ./configure
+    </pre>
+
+                   
+                   
+                    <p>Make sure that the "configure" is successful. Sample configure summary below</p>
+                    <pre class='block'>
+                Summary
+-----------------------------------------
+Verbose make            : no
+OCaml compiler          : yes
+    Version             : 3.12.1
+    Library path        : /usr/lib/ocaml
+    Native compilation  : yes
+    Profiling           : no
+IDE                     : yes
+Bench tool              : no
+Documentation           : no
+Coq support             : no (coqc not found)
+PVS support             : no (pvs not found)
+Frama-C support         : no
+Hypothesis selection    : yes
+Installable             : yes
+    Binary path         : ${exec_prefix}/bin
+    Data path           : ${prefix}/share/why3
+    Relocatable         : no        
+    </pre>
+                    <p>Proceed with the installation.</p>
+
+                    <pre class='block'>
+make
+sudo make install
+cd ..        
+    </pre>
+                </div>
+            </div>
+
+        </p>
+        <ul>
+
+        </ul>
+
+        <h3 class="ui header" id='Z3Install'>Z3 Installation</h3> 
+        Download Z3 source: <a href="https://github.com/Z3Prover/z3/archive/0b1e8ff91295ce70c6ffc2390f68b851f5bc1a6f.zip">Z3 Source</a>
+        <pre class='block'>
+wget http://github.com/Z3Prover/z3/archive/0b1e8ff91295ce70c6ffc2390f68b851f5bc1a6f.zip
+sudo apt-get install python autoconf
+unzip z3-0b1e8ff91295ce70c6ffc2390f68b851f5bc1a6f.zip
+cd z3-0b1e8ff91295ce70c6ffc2390f68b851f5bc1a6f
+python scripts/mk_make.py
+cd build
+make
+sudo make install
+</pre>
+
+        <h3 class="ui header" id='ConfigureWhy3'>Configure why3 to detect provers</h3>
+        <p>Run the following command to to detect freshly installed provers.</p>
+
+        <pre>why3 config --detect-provers</pre>
+
+        <h3 class="ui header" id='CAPSInstall'>CAPS Installation</h3> The latest version of the CAPS can be downloaded here.
+        <a href="https://www.cse.iitb.ac.in/~dipakc/CAPS/CAPS_v0.3.6.tar.gz">CAPS v0.3.6</a>
+
+        <p>Extract the archive. It contains the following files.</p>
+        <pre class='block'>
+application.conf            # Sample config file
+staged/
+start                       # start script
+</pre>
+        <p>Update the Why3 path and other variables in the application.conf file. Run the start command to start the server</p>
+        <pre class='block'>
+chmod u+x ./start
+./start -Dconfig.file=./application.conf           
+       </pre> Connect to <a href="http://localhost:9000">http://localhost:9000</a> to access the CAPS application GUI. Login with user name user1@company.com and passsword secret1.
+
+        <h2 class="ui header" id='Usage'>Usage</h2>
+        <p>(The videos are for the older version. The tactic names and parameters might not match.)</p>
+
+        <h3 class="ui header" id='StartDeriv'>Starting the derivation</h3>
+        <p>Start the derivation by applying the `Init4` tactic.</p>
+        
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/Eg98rNIC67k" frameborder="0" allowfullscreen></iframe>
+        <h3 class="ui header" id='DerivIf'>Deriving "If" program construt </h3>
+        <p>TODO</p>
+        <h3 class="ui header" id='PropAssumption'>Propagating Assumptions </h3>
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/D4TSzDqb5nA" frameborder="0" allowfullscreen></iframe>
+
+        <h3 class="ui header" id='StepSubProg'>Stepping into subprograms</h3>
+        To step into a subformula, apply the `StepIntoProgId` tactic.
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/d--reXrPs3M" frameborder="0" allowfullscreen></iframe>
+        <h3 class="ui header" id='StepSubFormula'>Stepping into subformulas</h3>
+        To step into a subformula, apply the `StepIntoSubFormula` tactic.
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/kHHAbNDEecE" frameborder="0" allowfullscreen></iframe>
+        <h3 class="ui header" id='SimplifyAuto'>SimplifyAuto tactic</h3>
+        To simplify the current formula with the help of ATPS, apply `SimplifyAuto` tactic.
+        <iframe width="800" height="450" src="https://www.youtube.com/embed/uuIIHKMR-Ww" frameborder="0" allowfullscreen></iframe>
+
+        <h3 class="ui header" id='LogicalOpr'>Input commands for logical operators</h3>
+
+        <table class="ui celled table">
+            <thead>
+            <tr>
+                <th>
+                    Operator
+                </th>
+                <th>
+                    Input command
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    Conjunction
+                </td>
+                <td>
+                    <pre>\and</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Disjunction
+                </td>
+                <td>
+                    <pre>\or</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Negation
+                </td>
+                <td>
+                    <pre>\neg</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Equivalence
+                </td>
+                <td>
+                    <pre>\equiv</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Implication
+                </td>
+                <td>
+                    <pre>\implies</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Universal Quantifier
+                </td>
+                <td>
+                    <pre>\forall</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Existential Quantifer
+                </td>
+                <td>
+                    <pre>\exists</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Max Quantifer
+                </td>
+                <td>
+                    <pre>\Max</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Min Quantifer
+                </td>
+                <td>
+                    <pre>\Min</pre>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Sum Quantifer
+                </td>
+                <td>
+                    <pre>\Sum</pre>
+                </td>
+            </tr>
+            <tr class='capshidden'>
+                <td>
+                    Prod Quantifer
+                </td>
+                <td>
+                    <pre>\Prod</pre>
+                </td>
+            </tr>
+            <tr class='capshidden'>
+                <td>
+                    Count Quantifer
+                </td>
+                <td>
+                    <pre>\Count</pre>
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+
+
+        <h3 class="ui header" id='ArithOpr'>Input commands for arithmetic operators</h3>
+
+        <table class="ui celled table">
+           <thead>
+            <tr>
+                <th>Opereator</th>
+                <th>Input Command</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Addition</td>
+                <td><pre>+</pre></td>
+            </tr>
+            <tr>
+                <td>Subtraction</td>
+                <td><pre>-</pre></td>
+            </tr>
+            <tr>
+                <td>Multiplication</td>
+                <td><pre>\ast</pre></td>
+            </tr>
+            <tr>
+                <td>Division</td>
+                <td><pre>\slash</pre></td>
+            </tr>
+            </tbody>
+        </table>        
+
+    </div>
+    </div>
+
+</body>
+
+</html>

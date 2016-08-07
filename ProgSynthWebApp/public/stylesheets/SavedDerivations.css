@@ -1,0 +1,15 @@
+﻿
+div#renameModal .message {
+    margin: 1em;
+}
+
+#caps-derivations-table {
+    margin-top: 4em;
+}
+
+div#caps-derivations-container {
+    width:70%;
+    margin:auto;
+    margin-top: 2em;
+    margin-bottom: 1em;
+}

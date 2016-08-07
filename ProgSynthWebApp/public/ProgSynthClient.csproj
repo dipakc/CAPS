@@ -1,0 +1,462 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{4685E67B-D8BF-4A07-9E38-CCB076003D76}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>public</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59057</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49234/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>AMD</TypeScriptModuleKind>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="example.html" />
+    <Content Include="images\80ade5_40x100_textures_04_highlight_hard_100.png" />
+    <Content Include="images\D1E6FC_40x100_textures_10_dots_medium_90.png" />
+    <Content Include="images\d6d6d6_40x100_textures_02_glass_80.png" />
+    <Content Include="images\eeeeee_40x100_textures_02_glass_90.png" />
+    <Content Include="images\favicon.png" />
+    <Content Include="images\go-dn-on.gif" />
+    <Content Include="images\go-lt-off.gif" />
+    <Content Include="images\go-lt-on.gif" />
+    <Content Include="images\go-rt-off.gif" />
+    <Content Include="images\go-rt-on.gif" />
+    <Content Include="images\go-up-on.gif" />
+    <Content Include="images\pin-dn-off.gif" />
+    <Content Include="images\pin-dn-on.gif" />
+    <Content Include="images\pin-up-off.gif" />
+    <Content Include="images\pin-up-on.gif" />
+    <Content Include="images\resizable-e.gif" />
+    <Content Include="images\resizable-n.gif" />
+    <Content Include="images\resizable-s.gif" />
+    <Content Include="images\resizable-w.gif" />
+    <Content Include="images\toggle-dn.gif" />
+    <Content Include="images\toggle-lt.gif" />
+    <Content Include="images\toggle-rt.gif" />
+    <Content Include="images\toggle-up.gif" />
+    <TypeScriptCompile Include="javascripts\BottomPanel.ts" />
+    <Content Include="javascripts\BottomPanel.js">
+      <DependentUpon>BottomPanel.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\TypeRegistry.ts" />
+    <Content Include="javascripts\ClassRegistry.js">
+      <DependentUpon>TypeRegistry.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\datamain-derivations.js" />
+    <Content Include="javascripts\datamain.js" />
+    <TypeScriptCompile Include="javascripts\FoldableDiv.ts" />
+    <TypeScriptCompile Include="javascripts\EditTactic.ts" />
+    <Content Include="javascripts\EditTactic.js">
+      <DependentUpon>EditTactic.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\foldableDiv.js">
+      <DependentUpon>FoldableDiv.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\InitSemUI.ts" />
+    <TypeScriptCompile Include="javascripts\HtmlJsonUtils.ts" />
+    <Content Include="javascripts\HtmlJsonUtils.js">
+      <DependentUpon>HtmlJsonUtils.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\InitSemUI.js">
+      <DependentUpon>InitSemUI.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\lib\backbone.js" />
+    <TypeScriptCompile Include="javascripts\InputPanel.ts" />
+    <Content Include="javascripts\input_panel2.js">
+      <DependentUpon>InputPanel.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\lib\pithy.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\accordion.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\accordion.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\accordion.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\accordion.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\ad.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\ad.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\api.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\api.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\breadcrumb.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\breadcrumb.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\button.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\button.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\card.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\card.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\checkbox.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\checkbox.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\checkbox.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\checkbox.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\colorize.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\colorize.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\comment.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\comment.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\container.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\container.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dimmer.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dimmer.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dimmer.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dimmer.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\divider.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\divider.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dropdown.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dropdown.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dropdown.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\dropdown.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\embed.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\embed.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\embed.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\embed.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\feed.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\feed.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\flag.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\flag.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\form.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\form.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\form.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\form.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\grid.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\grid.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\header.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\header.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\icon.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\icon.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\image.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\image.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\input.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\input.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\item.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\item.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\label.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\label.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\list.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\list.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\loader.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\loader.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\menu.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\menu.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\message.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\message.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\modal.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\modal.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\modal.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\modal.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\nag.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\nag.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\nag.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\nag.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\popup.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\popup.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\popup.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\popup.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\progress.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\progress.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\progress.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\progress.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\rail.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\rail.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\rating.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\rating.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\rating.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\rating.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\reset.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\reset.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\reveal.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\reveal.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\search.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\search.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\search.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\search.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\segment.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\segment.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\shape.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\shape.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\shape.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\shape.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sidebar.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sidebar.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sidebar.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sidebar.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\site.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\site.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\site.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\site.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\state.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\state.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\statistic.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\statistic.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\step.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\step.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sticky.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sticky.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sticky.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\sticky.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\tab.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\tab.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\tab.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\tab.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\table.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\table.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\transition.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\transition.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\transition.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\transition.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\video.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\video.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\video.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\video.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\visibility.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\visibility.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\visit.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\components\visit.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\package.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\semantic.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\semantic.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\semantic.min.css" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\semantic.min.js" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\themes\default\assets\fonts\icons.svg" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\themes\default\assets\images\flags.png" />
+    <Content Include="javascripts\lib\log4javascript.js" />
+    <TypeScriptCompile Include="javascripts\MinimizableWithTitle.ts" />
+    <TypeScriptCompile Include="javascripts\MinimizableDiv.ts" />
+    <Content Include="javascripts\minimizableDiv.js">
+      <DependentUpon>MinimizableDiv.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\minimizableWithTitle.js">
+      <DependentUpon>MinimizableWithTitle.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\options_handler.js">
+      <DependentUpon>OptionsHandler.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\OptionsHandler.ts" />
+    <TypeScriptCompile Include="javascripts\PSMenuBar.ts" />
+    <Content Include="javascripts\ParseTest.ts" />
+    <Content Include="javascripts\psMenuBar.js">
+      <DependentUpon>PSMenuBar.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\psweb.jquery.layout.js">
+      <DependentUpon>psweb.jquery.layout.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\psweb.jquery.layout.ts" />
+    <Content Include="javascripts\ps_debug.js">
+      <DependentUpon>PSDebug.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\PSDebug.ts" />
+    <Content Include="javascripts\ps_derivation.js">
+      <DependentUpon>PSDerivation.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\ps_derivation.js.map">
+      <DependentUpon>PSDerivation.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\PSDerivation.ts" />
+    <Content Include="javascripts\ps_jquery_utils.js">
+      <DependentUpon>PSJqueryUtils.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\PSJqueryUtils.ts" />
+    <TypeScriptCompile Include="javascripts\SavedDerivations.ts" />
+    <Content Include="javascripts\SavedDerivations.js">
+      <DependentUpon>SavedDerivations.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\SavedDerivationsNew.ts" />
+    <Content Include="javascripts\SavedDerivationsNew.js">
+      <DependentUpon>SavedDerivationsNew.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\ServerLog.js" />
+    <Content Include="javascripts\synthtree_model.js">
+      <DependentUpon>SynthtreeModel.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\SynthtreeModel.ts" />
+    <Content Include="javascripts\templateMgr.js">
+      <DependentUpon>TemplateMgr.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\TemplateMgr.ts" />
+    <TypeScriptCompile Include="javascripts\ToggleId.ts" />
+    <Content Include="javascripts\tmpderivationsdev.js" />
+    <Content Include="javascripts\tmpdev.js" />
+    <Content Include="javascripts\toggleId.js">
+      <DependentUpon>ToggleId.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\TypeTVs.ts" />
+    <Content Include="javascripts\TypeTVs.js">
+      <DependentUpon>TypeTVs.ts</DependentUpon>
+    </Content>
+    <TypeScriptCompile Include="javascripts\TypeViews.ts" />
+    <Content Include="javascripts\TypeViews.js">
+      <DependentUpon>TypeViews.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\typings\backbone\backbone.d.ts" />
+    <Content Include="javascripts\typings\handlebars\handlebars.d.ts" />
+    <Content Include="javascripts\typings\jqueryui\jqueryui.d.ts" />
+    <Content Include="javascripts\typings\jquery\jquery.d.ts" />
+    <Content Include="javascripts\typings\log4javascript\log4javascript.d.ts" />
+    <Content Include="javascripts\typings\requirejs\require.d.ts" />
+    <Content Include="javascripts\typings\toastr\toastr.d.ts" />
+    <Content Include="javascripts\typings\underscore\underscore.d.ts" />
+    <Content Include="packages.config" />
+    <Content Include="javascripts\lib\toastr.js" />
+    <Content Include="javascripts\lib\toastr.min.js" />
+    <Content Include="stylesheets\SavedDerivations.css" />
+    <Content Include="stylesheets\toastr\toastr.css" />
+    <Content Include="stylesheets\toastr\toastr.min.css" />
+    <Content Include="stylesheets\toastr\toastr.less" />
+    <Content Include="javascripts\lib\handlebars.js" />
+    <Content Include="javascripts\lib\Hydrate.js" />
+    <Content Include="javascripts\lib\jquery-1.7.1.min.js" />
+    <Content Include="javascripts\lib\jquery-ui-1.10.0.custom.js" />
+    <Content Include="javascripts\lib\jquery.hotkeys.js" />
+    <Content Include="javascripts\lib\jquery.jstree.js" />
+    <Content Include="javascripts\lib\jquery.layout.js" />
+    <Content Include="javascripts\lib\mathquill\mathquill.js" />
+    <Content Include="javascripts\lib\mathquill\mathquill.min.js" />
+    <Content Include="javascripts\lib\require.js" />
+    <Content Include="javascripts\lib\text.js" />
+    <Content Include="javascripts\lib\underscore-min.js" />
+    <Content Include="javascripts\templates\_tacticInputDivs.tpl.html" />
+    <Content Include="javascripts\tests\yui_boilerplate.js" />
+    <Content Include="javascripts\tests\yui_sample.js" />
+    <Content Include="javascripts\tests\yui_test_main.js" />
+    <Content Include="stylesheets\jquery-ui-1.10.0.custom.css" />
+    <Content Include="stylesheets\layout-default1.css" />
+    <Content Include="stylesheets\main.css" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\STIXFontLicense2010.txt" />
+    <Content Include="stylesheets\mathquill\mathquill.css" />
+    <Content Include="stylesheets\parseTest.css" />
+    <Content Include="stylesheets\progsynthlog.css" />
+    <Content Include="stylesheets\psweb.jquery.layout.css" />
+    <Content Include="stylesheets\psweb.jquery.layout2.css" />
+    <Content Include="yui_test_main.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.svg" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.eot" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.svg" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.ttf" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.woff" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.eot" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.svg" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.ttf" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.woff" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.eot" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.svg" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.ttf" />
+    <Content Include="stylesheets\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.woff" />
+    <Content Include="stylesheets\mathquill\font\Symbola.eot" />
+    <Content Include="stylesheets\mathquill\font\Symbola.otf" />
+    <Content Include="stylesheets\mathquill\font\Symbola.svg" />
+    <Content Include="stylesheets\mathquill\font\Symbola.ttf" />
+    <Content Include="stylesheets\mathquill\font\Symbola.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="tincr.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\go-rt-off.gif-{ee3bf810-ccb4-4eb9-8427-401215a491ee}.dtapart" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="docs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\ps_jquery_utils.js.map">
+      <DependentUpon>PSJqueryUtils.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\input_panel2.js.map">
+      <DependentUpon>InputPanel.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\psweb.jquery.layout.js.map">
+      <DependentUpon>psweb.jquery.layout.ts</DependentUpon>
+    </Content>
+    <Content Include="javascripts\templateMgr.js.map">
+      <DependentUpon>TemplateMgr.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\ps_debug.js.map">
+      <DependentUpon>PSDebug.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\options_handler.js.map">
+      <DependentUpon>OptionsHandler.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\toggleId.js.map">
+      <DependentUpon>ToggleId.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\foldableDiv.js.map">
+      <DependentUpon>FoldableDiv.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\synthtree_model.js.map">
+      <DependentUpon>SynthtreeModel.ts</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\lib\Semantic-UI-CSS\.versions" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\dist.zip" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\LICENSE" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\package.json" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\README.md" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\themes\default\assets\fonts\icons.eot" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\themes\default\assets\fonts\icons.otf" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\themes\default\assets\fonts\icons.ttf" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\themes\default\assets\fonts\icons.woff" />
+    <Content Include="javascripts\lib\Semantic-UI-CSS\themes\default\assets\fonts\icons.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="javascripts\lib\mathquill\mathquill.min.js.map">
+      <DependentUpon>mathquill.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\TypeScript\Microsoft.TypeScript.targets" />
+</Project>

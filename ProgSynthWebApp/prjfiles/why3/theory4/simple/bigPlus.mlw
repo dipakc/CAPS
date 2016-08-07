@@ -1,0 +1,22 @@
+
+module BigPlus
+
+	use import int.Int
+	(*use import int.MinMax*)
+	use HighOrd as HO
+
+	use import capsUtil.CapsUtil as CapsUtil
+	
+	constant bigPlus: (int -> bool) -> (int -> int) -> int
+	
+	axiom onePointPlus:
+		forall r: int -> bool, t: int -> int, x: int.
+			one_point r x -> 
+				bigPlus r t = t x 
+		
+	axiom emptyRangePlus:
+		forall r: int -> bool, t: int -> int.
+			empty_range r -> 
+				bigPlus r t = 0 
+					
+end

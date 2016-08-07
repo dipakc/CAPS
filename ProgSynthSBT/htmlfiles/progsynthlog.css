@@ -1,0 +1,1055 @@
+body {
+  /*font: 13px/1.4 Helvetica,arial,freesans,clean,sans-serif;*/
+     
+    margin-left:5%;
+    margin-right:5%;
+}
+.right .content div,
+.inputPanel div {
+  float: left;
+  /*padding:0.2em 0.2em;*/
+
+}
+.inputPanel form {
+  margin-left: 1em;
+  margin-top: 0.5em;
+}
+.ProgramAnn,
+.FunctionProg {
+  /*border:2px solid #a1a1a1;*/
+
+  background: #E9967A;
+  border: 0.15em solid #E9AA7A;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  clear: both;
+  box-shadow: -6px -6px 3px #888888;
+}
+.StepinSubFormula {
+  border: 2px solid yellow;
+  border-bottom: 3px solid brown;
+  border-radius: 0.5em;
+  padding-bottom: 0.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+.StepoutSubFormula {
+  border: 2px solid yellow;
+  border-top: 3px solid brown;
+  border-radius: 0.5em;
+  padding-top: 0.3em;
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+.pre,
+.post {
+  /*border:	0.1em solid #a1a1a1;*/
+
+  /*background: rgb(255, 200, 255);*/
+
+  background: #F1BAA7;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  margin: 0.2em;
+  padding: 0.2em;
+  clear: both;
+}
+.VarDefProgAnn > .pre,
+.VarDefProgAnn > .post,
+.ValDefProgAnn > .pre,
+.ValDefProgAnn > .post,
+.AssumeProgAnn > .pre,
+.AssumeProgAnn > .post,
+.CompositionAnn > .pre,
+.CompositionAnn > .post {
+  /*display: none;*/
+
+}
+.pre .AssumedPre {
+  border: 0.1em solid #FF0000;
+  background: #F1BAA7;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  margin: 0.2em;
+  padding: 0.2em;
+  clear: both;
+}
+.program {
+  /*border: 0.1em solid #a1a1a1;*/
+
+  padding: 0.2em;
+  margin: 0.2em;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  clear: both;
+  /*background: #DDD;*/
+
+  background: #E9967A;
+}
+.grdcmds {
+  clear: left;
+}
+/*
+.WhileProg .deco {
+	clear: left;
+}*/
+.loopInv {
+  background: #4E8975;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  margin: 0.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+.GuardedCmd {
+  clear: left;
+  margin-left: 1em;
+}
+collapse {
+  cursor: pointer;
+  float: left;
+  margin: 0.5em;
+  clear: left;
+}
+.seperator {
+  margin-right: 0.25em;
+}
+.Pred .Var .t,
+.Pred .Var .deco {
+  display: none;
+}
+.pa_proofobligs {
+  background: #659EC7;
+  border: 0.15em solid #999EC7;
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  clear: left;
+  margin: 0.5em;
+  box-shadow: -6px -6px 3px #888888;
+}
+.pa_proofobligs .status {
+  background: #7FFFD4;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.pa_proofobligs .status .valid {
+  color: green;
+}
+.pa_proofobligs .status .notvalid {
+  color: red;
+}
+.pa_proofobligs .status .model {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.pa_proofobligs .status .fullmodel {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  white-space: pre;
+}
+.pa_proofobligs .failed {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  color: red;
+}
+.pa_proofobligs .status .model .varitem {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  clear: left;
+}
+.prg_proofobligs {
+  padding: 0.2em;
+  margin: 0.2em;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  background: #659EC7;
+  clear: left;
+}
+.proofobligs .pa_id {
+  background: red;
+}
+.proofoblig {
+  border-radius: 0.25em;
+  /*background: #659EC7;*/
+
+  /*color: #659EC7;*/
+
+  clear: left;
+  margin: 0.5em;
+  padding: 0.2em;
+}
+.deco {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.r {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.ProgramAnn .rvVar {
+  background: yellow;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  border-radius: 0.25em;
+}
+.Assignment .rhs .ProgramAnn .pre,
+.Assignment .rhs .ProgramAnn .program,
+hi .Assignment .rhs .ProgramAnn .post {
+  clear: none;
+}
+.synth_info,
+.synth_item,
+.synth_pas {
+  clear: both;
+}
+.synth_pas {
+  margin-left: 3em;
+}
+form div.fieldDiv {
+  clear: left;
+}
+form .selectedSubTV {
+  clear: left;
+}
+/*
+.Invariant{
+	border:2px solid #a1a1a1;
+	padding:0.2em 0.2em;
+	background:#FFD;
+	border-radius:0.25em;
+	-moz-border-radius:0.25em;
+	float: left;
+	clear: both;
+}
+
+.Invariant .formula {
+	border:2px solid #a1a1a1;
+	padding:0.2em 0.2em;
+	background:#FEE;
+	border-radius:0.25em;
+	-moz-border-radius:0.25em;
+	float: left;
+}
+
+.Invariant .And , .Invariant .Impl{
+	border:none;
+	background: gray;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .And  .f1{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .And  .f2{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .Impl  .f1{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .Impl  .f2{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+*/
+/*Hidden Elements*/
+/*.Invariant , */
+.ProgramAnn .loc,
+dummy,
+.Identifier .itype,
+.Var .t,
+.Var .deco,
+.Const .tpe,
+.Const .deco {
+  display: none;
+}
+.FunctionProg {
+  clear: both;
+}
+.FunctionProg .annProg {
+  clear: both;
+}
+/* Derivation Interface */
+.left {
+  float: left;
+  width: 20%;
+}
+.right {
+  float: right;
+  width: 80%;
+}
+.top {
+  clear: both;
+}
+.content {
+  clear: both;
+  margin-left: 2em;
+  margin-right: 1em;
+}
+.node {
+  clear: both;
+}
+.nodeid {
+  float: left;
+  clear: left;
+}
+.tactic {
+  float: left;
+  margin-left: 1em;
+  color: #6464ff;
+}
+.nodeObj {
+  color: #646464;
+  display: none;
+}
+.curNodeId {
+  display: none;
+}
+.folformula {
+  background: #ffb4ff;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  margin: 0.2em;
+  padding: 0.2em;
+  clear: both;
+}
+.top {
+  background: #9cafde;
+  color: #e6f0f0;
+  width: 100%;
+  padding: 0.4em;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+}
+.top .topButton {
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  text-align: center;
+  margin-left: 5px;
+  width: 5em;
+  background: #325096;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+}
+.content .PredDisplayIdClass {
+  background: #66c800;
+  padding: 0.2em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ff9900;
+}
+/*
+.content .VarDisplayIdClass,
+.content .ConstDisplayIdClass,
+.content .ArrSelectDisplayIdClass,
+.content .ArrStoreDisplayIdClass,
+.content .QTermDisplayIdClass,
+.content .FnAppDisplayIdClass*/
+.content .TermDisplayIdClass {
+  background: #669900;
+  padding: 0.2em;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ff9900;
+}
+/*
+.content .True1DisplayIdClass,
+.content .False1DisplayIdClass,
+.content .NotDisplayIdClass,
+.content .AndDisplayIdClass,
+.content .OrDisplayIdClass,
+.content .ImplDisplayIdClass,
+.content .IffDisplayIdClass,
+.content .ForallDisplayIdClass,
+.content .ExistsDisplayIdClass,
+.content .UnknownDisplayIdClass */
+.content .FormulaDisplayIdClass {
+  background: #ffcfb8;
+  padding: 0.2em;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #ff9900;
+}
+.right .statusbar {
+  background: #9cafde;
+  color: #e6f0f0;
+  width: 100%;
+  padding: 0.4em;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  clear: both;
+  min-height: 2em;
+  margin-top: 2em;
+}
+.content .DisplayIdClass .outline-element {
+  /*border-width:2px;
+ 	border-style:solid;*/
+
+  border-color: red;
+}
+.FnApp .opr {
+  padding: 0.2em;
+}
+/*
+.selected > .nodeid, .selected > .tactic {
+    color:#A55;
+    font-weight:bold;
+}
+*/
+/*.id, */
+.displayId,
+collapse {
+  display: none;
+}
+/*Thin Table border*/
+table.tablestyle {
+  border-width: 0 0 1px 1px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-style: solid;
+}
+.tablestyle td,
+.tablestyle th {
+  margin: 0;
+  padding: 4px;
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+}
+/*Assignment Derivation*/
+.asgnDerivation .heading {
+  clear: both;
+  font-weight: bold;
+}
+.asgnDerivation {
+  clear: left;
+}
+.AsgnDerivStep {
+  clear: both;
+}
+.toProve .antecedent,
+.toProve .consequent,
+.toProve .toProveDeco {
+  clear: both;
+}
+.asgnDerivation .step {
+  clear: both;
+  background-color: #c0d2ff;
+}
+.asgnDerivation .toProve {
+  clear: both;
+  margin-left: 1em;
+}
+.asgnDerivation .proofTable {
+  clear: both;
+  margin-left: 1em;
+}
+.inputPanel .CompositeVal {
+  border-color: gray;
+  border-radius: 0.5em;
+  border-style: solid;
+  border-width: 1px;
+  clear: both;
+  margin: 4px;
+  padding: 4px;
+}
+.inputPanel .ListVal .listItem {
+  clear: both;
+  margin: 2px;
+}
+.inputPanel #applyTacticBtn {
+  clear: both;
+  font-weight: bold;
+}
+.inputPanel .FieldVal {
+  clear: both;
+}
+.inputPanel .FieldVal .fname {
+  font-weight: bold;
+}
+.mathquill-editable {
+  min-width: 8em;
+}
+.buttonlink {
+  display: block;
+  border-style: solid;
+  border-color: #bbb #888 #666 #aaa;
+  border-width: 3px 4px 4px 3px;
+  background: #ccc;
+  color: #333;
+  line-height: 2;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 900;
+  padding: 0.2em;
+}
+.buttonlink:hover {
+  border-color: #666 #aaa #bbb #888;
+  border-width: 4px 3px 3px 4px;
+  color: #000;
+}
+/* Tactic Panel */
+.left .nsview {
+  white-space: nowrap;
+}
+.left .nsview .nodeview.selected {
+  color: #A55;
+  font-weight: bold;
+}
+.left .nsview.current {
+  border-style: double;
+}
+.left .nsview div {
+  display: inline-block;
+}
+.left .nsview .nodeview {
+  padding-left: 0.3em;
+  padding-right: 0.3em;
+}
+.left .nsview .siblingsview .siblingitem {
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  background-color: #325096;
+  min-height: 0.8em;
+  min-width: 0.8em;
+}
+.left .nsview .menuicon {
+  display: none;
+}
+.left .nsview:hover .menuicon {
+  display: inline-block;
+  float: right;
+  /*background-image: url(assets/images/favicon.png);*/
+
+  /*background: url('/assets/images/favicon.png') no-repeat; */
+
+}
+.HBox .Frame {
+  background-color: #006680;
+  color: orange;
+  margin: 0.2em;
+  /* margin-left: -0.2em; */
+
+  padding: 0.2em;
+  /* padding-left: 0; */
+
+  box-shadow: -2px -2px 2px #888888;
+  width: 100%;
+}
+.Frame {
+  background-color: #006680;
+  color: orange;
+  margin: 0.2em;
+  /* margin-left: -0.2em; */
+
+  padding: 0.2em;
+  /* padding-left: 0; */
+
+  box-shadow: -2px -2px 2px #888888;
+  width: 100%;
+  clear: both;
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+}
+.content .ProgFrameSummary {
+  clear: both;
+}
+.content .ProgFrameSummary .ctxval {
+  margin: 0.5em;
+}
+.content .ProgFrameSummary .ctxvar {
+  margin: 0.5em;
+  color: #eb7e59;
+}
+.content .ProgFrameSummary .globalInvs {
+  clear: both;
+}
+.content .ProgFrameSummary .globalInv {
+  /*margin: 0.5em;*/
+
+  clear: both;
+}
+.content .FormulaFrameSummary {
+  clear: both;
+  background-color: #646680;
+}
+.content .FormulaFrameSummary .dummyvar {
+  margin: 0.5em;
+  /*color: #b2a032;*/
+
+  color: orange;
+}
+.content .FormulaFrameSummary .axiom {
+  margin: 0.5em;
+  /*color: #b2a032;*/
+
+  color: orange;
+}
+.context {
+  background-color: #c0d2ff;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  margin-top: 0.5em;
+}
+.posummary {
+  background-color: #c0d2ff;
+  border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  margin-top: 0.5em;
+  padding: 0.5em;
+}
+.bracket_scroll_mode {
+  border-left: solid;
+  border-right: solid;
+  border-radius: 0.5em;
+  padding: 5px;
+  border-width: 0.1em;
+  margin-left: 0.25em;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-wrap: wrap;
+  /*Initially wrap was not there*/
+
+}
+.Term,
+.Term div {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-wrap: wrap;
+}
+.cmd > .CompositionAnn {
+  margin-left: 4em;
+}
+.AsgnDerivStep {
+  background-color: pink;
+  margin: 0.2em;
+  padding: 0.2em;
+  box-shadow: -2px -2px 2px #888888;
+  width: 100%;
+}
+.asgnDerivation {
+  box-shadow: -2px -2px 2px #888888;
+  margin: 0.2em;
+  padding: 0.2em;
+  background-color: #bbb;
+  width: 100%;
+}
+.CalcProofStep {
+  clear: both;
+  width: 100%;
+}
+.HBox {
+  border-top: solid;
+  border-left: solid;
+  margin: 0.1em;
+  padding: 0.2em;
+  margin-left: 1em;
+  padding-left: 0.5em;
+  border-top-left-radius: 0.5em;
+  -moz-border-top-left-radius: 0.5em;
+  -webkit-border-top-left-radius: 0.5em;
+  box-shadow: -6px -6px 3px #888888;
+  border-color: white;
+}
+.nodeObjDbg {
+  color: gray;
+  clear: both;
+  padding: 0.5em;
+}
+.spacediv {
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+}
+.hint {
+  background-color: lightblue;
+  padding: 0.2em;
+  margin: 0.2em;
+  box-shadow: -2px -2px 2px #888888;
+  width: 100%;
+  clear: both;
+}
+.hint,
+.hint div {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-wrap: wrap;
+}
+.hint > .tacticRelation {
+  margin-right: 0.5em;
+}
+.AsgnDerivStep > .tacticRelationSpace {
+  min-width: 1em;
+  clear: left;
+}
+/*LESS Library */
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.fullwidth {
+  width: 100%;
+}
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.smallshadow {
+  box-shadow: -2px -2px 2px #888888;
+}
+.bigshadow {
+  box-shadow: -6px -6px 3px #888888;
+}
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.flex_center_wrap {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-wrap: wrap;
+}
+.FormulaFrameSummary .axioms,
+.FormulaFrameSummary .axiom,
+.FormulaFrameSummary .dummyvars,
+.FormulaFrameSummary .relation {
+  clear: both;
+}
+.FormulaFrameSummary .relation {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+a.docLink {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+#applyTacticBtn {
+  appearance: button;
+  -moz-appearance: button;
+  /* Firefox */
+
+  -webkit-appearance: button;
+  /* Safari and Chrome */
+
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
+}
+.MetaVariableDiv {
+  clear: both;
+}
+.heading {
+  clear: both;
+  font-weight: bold;
+}
+.DerivedGuardedCommands {
+  clear: both;
+  font-weight: bold;
+  font-size: 150%;
+}
+.StatusTable,
+.GrdCmdTable {
+  clear: both;
+}
+.ifDerivation,
+.HintAndHBox {
+  clear: both;
+}
+/*Hide debug stuff*/
+.ProgramAnn .id,
+.posummary,
+.nodeObjDbg,
+.pa_proofobligs,
+.top,
+.statusbar {
+  display: none;
+}
+/*Assumed Pre Styles*/
+.FVAndAssumedPreInfo {
+  clear: both;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.FVAndAssumedPreInfo .Section {
+  margin-top: 0.2 em;
+  margin-bottom: 0.2 em;
+  clear: both;
+}
+.FVAndAssumedPreInfo .Section .field1 {
+  clear: left;
+  font-weight: bold;
+}
+.FVAndAssumedPreInfo .Section .field2 {
+  margin-left: 1em;
+}
+.FVAndAssumedPreInfo .Section .Header {
+  clear: both;
+  font-weight: bold;
+}
+.FVAndAssumedPreInfo .Section .List {
+  clear: both;
+  margin-left: 1em;
+}
+.ParentTactic,
+.ChildTactic {
+  background-color: lightblue;
+  /*border: 0.10em solid;*/
+
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  clear: both;
+  box-shadow: -3px -3px 1px #888888;
+}
+.AssumeProg {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-wrap: wrap;
+}
+.ThisNode {
+  clear: both;
+}
+/*Hide the formulaframesummary for program nodes*/
+.ThisNode > .Frame > .FrameSummary > .FormulaFrameSummary {
+  display: none;
+}
+.ProgramAnnParentNode > .Frame > .FrameSummary > .FormulaFrameSummary {
+  display: none;
+}
+/*TODO: temporary change. Hide the parent node */
+.ProgramAnnParentNode {
+  display: none;
+}
+/*add right margin to immediate children*/
+.SepChildsBySpace > div {
+  margin-right: 0.5em;
+}
+/* Proof Status Information*/
+.PPSList {
+  border: 0.1em solid;
+  border-color: red;
+  background-color: lightgreen;
+}
+.PPSList .pps {
+  margin: 0.5em;
+  padding: 0.5em;
+  clear: both;
+  border: 0.1em solid;
+  border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+}
+.PPSList .PO {
+  border: 0.1em solid;
+  background-color: pink;
+}
+.PPSList .MultiProverStatus .finalStatus {
+  border: 0.1em solid;
+  clear: both;
+}
+.PPSList .MultiProverStatus .proversRetInfo {
+  clear: both;
+}
+/*MinimizableDiv css settings*/
+/*Essential*/
+.Minimizable .MaxContent {
+  position: relative;
+}
+.Minimizable .MinLink {
+  position: absolute;
+  right: 0%;
+  top: 0;
+  z-index: 2;
+}
+/*
+.Minimizable .Hidden {
+	display:none;
+}
+*/
+/*Optional*/
+.Minimizable .MinContent {
+  border: solid;
+}
+.Minimizable .MaxLink {
+  margin-left: 1em;
+  background-color: yellow;
+}
+.Minimizable .MinLink {
+  background-color: yellow;
+  opacity: 0.5;
+  border: solid;
+}
+/*////////////////////////////////////////*/
+/*MinimizableWithTitle css settings*/
+.MinimizableWithTitle .T {
+  border: solid;
+  border-color: #C0C0C0;
+  width: 100%;
+  display: block;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+}
+.MinimizableWithTitle .C {
+  border: solid;
+  border-color: #C0C0C0;
+  clear: left;
+  width: 100%;
+}
+.MinimizableWithTitle > .T > .More {
+  float: right;
+  margin-left: 1em;
+}
+.MinimizableWithTitle > .T > .Less {
+  float: right;
+  margin-left: 1em;
+}
+.MinimizableWithTitle .Anchor {
+  text-decoration: underline;
+  cursor: pointer;
+  color: blue;
+}
+/*These seetings are required to establish initial state*/
+.MinimizableWithTitle.Open > .T > .More {
+  display: none;
+}
+.MinimizableWithTitle.Close > .T > .Less {
+  display: none;
+}
+.MinimizableWithTitle.Close > .C {
+  display: none;
+}
+.ServerData {
+  display: none;
+}
+.derivContainer {
+  clear: left;
+  margin: 1em;
+}
+.derivDiv {
+  clear: left;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+/*zebra stripes*/
+.derivDiv:nth-of-type(even) {
+  background: #CCF2FF;
+}
+.derivDiv:nth-of-type(odd) {
+  background: #99E6FF;
+}
+.FakeLink {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+/*Aligh UserInfo Menu to right of the menubar*/
+#psMenuBar .UserInfo {
+  float: right;
+}
+.ApplyTacticError {
+  clear: left;
+  color: red;
+}
+.CapsKeyword {
+  color: blue;
+  font-weight: 110%;
+  font-family: 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Monaco, Courier, monospace;
+  margin-right: 0.5em;
+}
+.guard-arrow {
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-flex-wrap: wrap;
+}
+.ui-menu {
+  width: 150px;
+}
+.tacticName {
+  font-weight: bold;
+}
+.paramTable {
+  clear: left;
+}
+/*Operator spacing*/
+.opr.bang {
+  color: chocolate;
+  font-weight: bold;
+}
+.opr.ampamp {
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  color: chocolate;
+  font-weight: bold;
+}
+.opr.pipepipe {
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+  color: chocolate;
+  font-weight: bold;
+}
+.opr.impl {
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  color: chocolate;
+  font-weight: bold;
+}
+.opr.rimpl {
+  padding-left: 0.8em;
+  padding-right: 0.8em;
+  color: chocolate;
+  font-weight: bold;
+}
+.opr.equiv {
+  padding-left: 1em;
+  padding-right: 1em;
+  color: chocolate;
+  font-weight: bold;
+}
+/*
+.GrdsCompleteError {
+	border: 0.2em solid #FF0000;	
+}
+*/

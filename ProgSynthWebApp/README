@@ -1,0 +1,60 @@
+This is your new Play 2.0 application
+=====================================
+
+This file will be packaged with your application, when using `play dist`.
+----------------
+>.\scripts\psplay.bat
+play> run
+----------------
+For debugging
+> set JPDA_PORT=9999
+> .\scripts\psplay.bat
+> play
+play> run
+----------------
+For debugging. Method 2
+> .\scripts\psplay.bat debug
+play> run
+----------------
+\begin{samepage}
+\noindent \textbf{AssignmentUp} \AssignmentUpRuleCaption \\
+\AssignmentUpRule \\
+
+\\
+\noindent \textbf{UnkProgUp} \UnkProgUpRuleCaption \\
+\UnkProgUpRule
+\\
+\noindent \textbf{UnkProgEst} \UnkProgEstRuleCaption \\
+\UnkProgEstRule
+\\
+\noindent \textbf{CompositionIn} \CompositionInRuleCaption \\
+\CompositionInRule
+\\
+\noindent \textbf{CompositionOut} \CompositionOutRuleCaption \\
+\CompositionOutRule
+\\
+\noindent \textbf{CompoToIf} \CompoToIfRuleCaption \\
+\CompoToIfRule
+\end{samepage}
+
+\begin{samepage}
+\noindent \textbf{IfIn} \IfInRuleCaption \\
+\IfInRule
+\\
+\noindent \textbf{IfOut} \IfOutRuleCaption \\
+\IfOutRule
+\\
+\noindent \textbf{IfGrd} \IfGrdRuleCaption \\
+\IfGrdRule
+\end{samepage}
+
+\begin{samepage}
+\noindent \textbf{WhileIn} \WhileInRuleCaption \\
+\WhileInRule
+\\
+\noindent \textbf{WhileStrInv} \WhileStrInvRuleCaption \\
+\WhileStrInvRule
+\\
+\noindent \textbf{WhilePostStrInv} \WhilePostStrInvRuleCaption \\
+\WhilePostStrInvRule
+\end{samepage}

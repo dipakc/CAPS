@@ -1,0 +1,27 @@
+
+module CapsUtil
+
+	use import int.Int
+	(*use import int.MinMax*)
+	use HighOrd as HO
+	
+	predicate non_empty_range(r: int -> bool) = (exists i: int. r i)
+
+	predicate empty_range(r: int -> bool) = not(non_empty_range r)
+		
+	predicate one_point(r: int -> bool)(x: int) = 
+		r x /\ (forall i: int. r i  -> i = x)
+	
+	predicate is_union_of(u p q: int -> bool) = 
+		forall x: int. u x <-> p x \/ q x
+
+	predicate is_union_of_v (ru r: int -> bool)(v: int) = 
+		forall x: int. ru x <-> (r x \/ x = v)
+		
+	predicate disjoint(p q: int -> bool) =
+		forall x: int.  not(p x /\ q x)
+		
+	predicate are_same(t1 t2: int -> int) = 
+		forall x: int. t1 x = t2 x
+	
+end

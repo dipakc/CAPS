@@ -1,0 +1,1252 @@
+body {
+    /*font: 13px/1.4 Helvetica,arial,freesans,clean,sans-serif;*/
+    font-family: times;
+    font-size: 14px; /*Remove font size. Added for taking snapshots*/
+}
+
+
+.ClearFloat {
+    &:after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+}
+
+.caps-right .caps-content div,
+.inputPanel div,
+.editTacticPanel div 
+ {
+	float: left;
+	/*padding:0.2em 0.2em;*/
+}
+
+.inputPanel,
+.editTacticPanel {
+    .ClearFloat;    
+}
+
+.inputPanel form,
+.editTacticPanel form {
+    margin-left: 1em;
+    margin-top: 0.5em;
+}
+
+.ProgramAnn, .FunctionProg { /*border:2px solid #a1a1a1;*/
+	background: #E9967A;
+	border: 0.15em solid #E9AA7A;
+	margin: 0.5em;
+	padding: 0.5em;
+	.roundedcorner(1em);
+	clear: both;
+	box-shadow: -6px -6px 3px #888888;
+}
+
+.StepinSubFormula {
+	border: 2px solid yellow;
+	border-bottom: 3px solid brown;
+	border-radius: 0.5em;
+	padding-bottom: 0.3em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+.StepoutSubFormula {
+	border: 2px solid yellow;
+	border-top: 3px solid brown;
+	border-radius: 0.5em;
+	padding-top: 0.3em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+.pre,.post { /*border:	0.1em solid #a1a1a1;*/
+	/*background: rgb(255, 200, 255);*/
+	background: #F1BAA7;
+	.roundedcorner(0.25em);
+	margin: 0.2em;
+	padding: 0.2em;
+	clear: both;
+}
+
+.ContentView.MinimalAnno .ProgramAnn:not(.ShowPre) .pre {
+	display: none;
+}
+
+.ContentView.MinimalAnno .ProgramAnn:not(.ShowPost) .post {
+	display: none;
+}
+
+.VarDefProgAnn > .pre,  
+.VarDefProgAnn > .post,
+.ValDefProgAnn > .pre,
+.ValDefProgAnn > .post,
+.AssumeProgAnn > .pre,
+.AssumeProgAnn > .post,
+.CompositionAnn > .pre,
+.CompositionAnn > .post,
+{
+ 	/*display: none;*/
+ }
+
+
+.pre .AssumedPre{ 
+	border:	0.1em solid #FF0000;
+	background: #F1BAA7;
+	.roundedcorner(0.25em);
+	margin: 0.2em;
+	padding: 0.2em;
+	clear: both;
+}
+
+.program {
+	/*border: 0.1em solid #a1a1a1;*/
+	padding: 0.2em;
+	margin: 0.2em;
+	.roundedcorner(0.25em);
+	clear: both;
+	/*background: #DDD;*/
+	background: #E9967A;
+}
+
+.grdcmds {
+	clear: left;
+}
+/*
+.WhileProg .deco {
+	clear: left;
+}*/
+.loopInv {
+	background: #4E8975;
+	.roundedcorner(0.25em);
+	margin: 0.2em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+.GuardedCmd {
+	clear: left;
+	margin-left: 1em;
+}
+
+collapse {
+	cursor: pointer;
+	float: left;
+	margin: 0.5em;
+	clear: left;
+}
+
+.seperator {
+	margin-right: 0.25em;
+}
+
+.Pred .Var .t,.Pred .Var .deco {
+	display: none;
+}
+
+.pa_proofobligs {
+	background: #659EC7;
+	border: 0.15em solid #999EC7;
+	.roundedcorner(1em);
+	clear: left;
+	margin: 0.5em;
+	box-shadow: -6px -6px 3px #888888;
+}
+
+.pa_proofobligs  .status {
+	background: #7FFFD4;
+	margin-left: 0.25em;
+	margin-right: 0.25em;
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
+.pa_proofobligs .status .valid {
+	color: green;
+}
+
+.pa_proofobligs .status .notvalid {
+	color: red;
+}
+
+.pa_proofobligs .status .model {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
+.pa_proofobligs .status .fullmodel {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	white-space: pre;
+}
+
+.pa_proofobligs .failed {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	color: red;
+}
+
+.pa_proofobligs .status .model  .varitem {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+	clear: left;
+}
+
+.prg_proofobligs {
+	padding: 0.2em;
+	margin: 0.2em;
+	.roundedcorner(0.25em);
+	background: #659EC7;
+	clear: left;
+}
+
+.proofobligs  .pa_id {
+	background: red;
+}
+
+.proofoblig {
+	border-radius: 0.25em;
+	/*background: #659EC7;*/
+	/*color: #659EC7;*/
+	clear: left;
+	margin: 0.5em;
+	padding: 0.2em;
+}
+
+.deco {
+	padding-left: 0.25em;
+	padding-right: 0.25em;
+}
+
+.r {
+	.hpadding(0.25em);
+}
+
+.ProgramAnn .rvVar {
+	background: yellow;
+	.hpadding(0.25em);
+	.hmargin(0.25em);
+	border-radius: 0.25em;
+}
+
+.Assignment .rhs .ProgramAnn .pre,.Assignment .rhs .ProgramAnn .program,hi
+.Assignment .rhs .ProgramAnn .post {
+	clear: none;
+}
+
+.synth_info,.synth_item,.synth_pas {
+	clear: both;
+}
+
+.synth_pas {
+	margin-left: 3em;
+}
+
+form div.fieldDiv {
+    clear: left;
+}
+
+form .selectedSubTV {
+    clear: left;
+}
+/*
+.Invariant{
+	border:2px solid #a1a1a1;
+	padding:0.2em 0.2em;
+	background:#FFD;
+	border-radius:0.25em;
+	-moz-border-radius:0.25em;
+	float: left;
+	clear: both;
+}
+
+.Invariant .formula {
+	border:2px solid #a1a1a1;
+	padding:0.2em 0.2em;
+	background:#FEE;
+	border-radius:0.25em;
+	-moz-border-radius:0.25em;
+	float: left;
+}
+
+.Invariant .And , .Invariant .Impl{
+	border:none;
+	background: gray;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .And  .f1{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .And  .f2{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .Impl  .f1{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+
+.Invariant .Impl  .f2{
+	border:none;
+	background: pink;
+	padding:0.2em 0.2em;
+	border-radius:0.2em;
+	-moz-border-radius:0.2em;
+	float: left;
+}
+*/
+
+/*Semantic UI style*/
+.ui.menu {
+	min-height: 10px; /*add !important (before ;) if needed */
+	height: 2em;
+}
+
+/*Hidden Elements*/
+/*.Invariant , */
+.ProgramAnn .loc, /*.Composition,*/ dummy,.Identifier .itype,.Var .t,.Var .deco,.Const .tpe,.Const .deco
+{
+	display: none;
+}
+
+.FunctionProg {
+	clear: both;
+}
+
+.FunctionProg .annProg {
+	clear: both;
+}
+
+/* Derivation Interface */
+.caps-left {
+	float: left;
+	width: 20%;
+}
+
+.caps-right {
+	float: right;
+	width: 80%;
+}
+
+.caps-top {
+	clear: both;
+}
+
+.caps-content {
+	clear: both;
+	margin-left: 2em;
+	margin-right: 1em;
+}
+
+.node {
+	clear: both;
+}
+
+.nodeid {
+	float: left;
+	clear: left;
+}
+
+.tactic {
+	float: left;
+	margin-left: 1em;
+	color: rgb(100, 100, 255);
+}
+
+.nodeObj {
+	color: rgb(100, 100, 100);
+	display: none;
+}
+
+.curNodeId {
+	display: none;
+}
+
+.folformula {
+	background: rgb(255, 180, 255);
+	.roundedcorner(0.25em);
+	margin: 0.2em;
+	padding: 0.2em;
+	clear: both;
+}
+.caps-top {
+	background: rgb(156, 175, 222);
+	color: rgb(230, 240, 240);
+	width: 100%;
+	padding: 0.4em;
+	.roundedcorner(0.25em);
+}
+
+.caps-top .topButton {
+	.hpadding(0.8em);
+	.vpadding(0.2em);
+	text-align:center;
+	margin-left: 5px;
+	width: 5em;
+	background: rgb(50, 80, 150);
+	.roundedcorner(0.25em);
+}
+
+
+.caps-content .ProgramAnnDisplayIdClass
+{
+}
+
+.caps-content .InvariantDisplayIdClass
+{
+}
+
+
+.caps-content .PredDisplayIdClass
+{
+	background: rgb(102, 200, 0);
+	padding: 0.2em;
+	border-width:1px;
+	border-style:solid;
+	border-color:#ff9900;
+}
+
+.caps-content .ProgramAnnDisplayIdClass {
+	border-width:1px;
+	border-style:solid;
+	border-color:#FFFF66;
+}
+
+/*
+.caps-content .VarDisplayIdClass,
+.caps-content .ConstDisplayIdClass,
+.caps-content .ArrSelectDisplayIdClass,
+.caps-content .ArrStoreDisplayIdClass,
+.caps-content .QTermDisplayIdClass,
+.caps-content .FnAppDisplayIdClass*/
+.caps-content .TermDisplayIdClass
+ {
+	background: rgb(102, 153, 0);
+	padding: 0.2em;
+	border-width:1px;
+	border-style:solid;
+	border-color:#ff9900;
+}
+
+/*
+.caps-content .True1DisplayIdClass,
+.caps-content .False1DisplayIdClass,
+.caps-content .NotDisplayIdClass,
+.caps-content .AndDisplayIdClass,
+.caps-content .OrDisplayIdClass,
+.caps-content .ImplDisplayIdClass,
+.caps-content .IffDisplayIdClass,
+.caps-content .ForallDisplayIdClass,
+.caps-content .ExistsDisplayIdClass,
+.caps-content .UnknownDisplayIdClass */
+.caps-content .FormulaDisplayIdClass
+ {
+	background: rgb(255, 207, 184);
+	padding: 0.2em;
+	border-width:2px;
+	border-style:solid;
+	border-color:#ff9900;
+}
+
+.caps-right .statusbar {
+	background: rgb(156, 175, 222);
+	color: rgb(230, 240, 240);
+	width: 100%;
+	padding: 0.4em;
+	.roundedcorner(0.25em);
+	clear: both;
+	min-height: 2em;
+	margin-top: 2em;
+}
+
+
+.caps-content .DisplayIdClass .outline-element
+ {
+	/*border-width:2px;
+ 	border-style:solid;*/
+	border-color:red;
+}
+
+.FnApp .opr {
+	padding: 0.2em;
+}
+/*
+.selected > .nodeid, .selected > .tactic {
+    color:#A55;
+    font-weight:bold;
+}
+*/
+
+/*.id, */
+.displayId,
+collapse
+{
+	display: none;
+}
+
+/*Thin Table border*/
+table.tablestyle
+{
+    border-width: 0 0 1px 1px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border-style: solid;
+}
+
+.tablestyle td, .tablestyle th
+{
+    margin: 0;
+    padding: 4px;
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+}
+
+
+/*Assignment Derivation*/
+.asgnDerivation .heading {
+	clear: both;
+	font-weight: bold;
+}
+
+.asgnDerivation  {
+	clear: left;
+}
+
+.AsgnDerivStep {
+    clear: both;
+}
+
+.toProve .antecedent,
+.toProve .consequent,
+.toProve .toProveDeco
+ {
+	clear: both;
+}
+
+.asgnDerivation .step {
+	clear: both;
+	background-color: rgb(192, 210, 255);
+}
+
+.asgnDerivation .toProve {
+	clear: both;
+	margin-left: 1em;
+}
+
+.asgnDerivation .proofTable{
+	clear: both;
+	margin-left: 1em;
+}
+
+.inputPanel .CompositeVal ,
+.editTacticPanel .CompositeVal {
+    border-color: gray;
+    border-radius: 0.5em;
+    border-style: solid;
+    border-width: 1px;
+    clear: both;
+    margin: 4px;
+    padding: 4px;
+}
+
+.inputPanel .ListVal .listItem ,
+.editTacticPanel .ListVal .listItem 
+{
+	clear: both;
+	margin: 2px;
+}
+
+.inputPanel #applyTacticBtn ,
+.editTacticPanel #editTacticBtn {
+  	clear: both;
+	font-weight: bold;
+}
+
+.inputPanel .FieldVal,
+.editTacticPanel .FieldVal {
+  	clear: both;
+}
+
+.inputPanel .FieldVal .fname ,
+.editTacticPanel .FieldVal .fname {
+  	font-weight: bold;
+}
+
+.mathquill-editable {
+	min-width: 8em;
+}
+
+.buttonlink{
+	display:block;
+	border-style:solid;
+	border-color:#bbb #888 #666 #aaa;
+	border-width:3px 4px 4px 3px;
+	background:#ccc;
+	color:#333;
+	line-height:2;
+	text-align:center;
+	text-decoration:none;
+	font-weight:900;
+	padding: 0.2em;
+}
+
+.buttonlink:hover{
+	border-color: #666 #aaa #bbb #888;
+	border-width:4px 3px 3px 4px;
+	color:#000;
+}
+
+
+/* Tactic Panel */
+
+.caps-left .nsview {
+     white-space: nowrap;
+}
+
+.caps-left .nsview .nodeview.selected {
+    color:#A55;
+    font-weight:bold;
+}
+
+.caps-left .nsview.current {
+    border-style: double;
+}
+
+.caps-left .nsview div {
+     display: inline-block;
+}
+
+.caps-left .nsview .nodeview {
+	.hpadding(0.3em);
+}
+
+.caps-left .nsview .siblingsview .siblingitem {
+	.roundedcorner(50%);
+    background-color: rgb(50, 80, 150);
+    min-height: 0.8em;
+    min-width: 0.8em;
+}
+
+.caps-left .nsview .menuicon {
+    display: none;
+}
+
+.caps-left .nsview:hover .menuicon{
+    display: inline-block;
+    float: right;
+    /*background-image: url(assets/images/favicon.png);*/
+    /*background: url('/assets/images/favicon.png') no-repeat; */
+}
+
+.HBox .Frame {
+    background-color: rgb(0, 102, 128);
+    color: orange;
+    margin: 0.2em;
+    /* margin-left: -0.2em; */
+    padding: 0.2em;
+    /* padding-left: 0; */
+    .smallshadow;
+    .fullwidth;
+}
+
+.Frame {
+    background-color: rgb(0, 102, 128);
+    color: orange;
+    margin: 0.2em;
+    /* margin-left: -0.2em; */
+    padding: 0.2em;
+    /* padding-left: 0; */
+    .smallshadow;
+    .fullwidth;
+    clear: both;
+	.roundedcorner(0.5em);
+}
+
+.caps-content .ProgFrameSummary {
+    clear: both;
+}
+.caps-content .ProgFrameSummary .ctxval {
+    margin: 0.5em;
+}
+.caps-content .ProgFrameSummary .ctxvar {
+    margin: 0.5em;
+    color: #eb7e59;
+}
+.caps-content .ProgFrameSummary .globalInvs {
+    clear: both;
+}
+.caps-content .ProgFrameSummary .globalInv {
+    /*margin: 0.5em;*/
+    clear: both;
+}
+
+
+
+.caps-content .FormulaFrameSummary {
+    clear: both;
+    background-color: rgb(100, 102, 128);
+}
+.caps-content .FormulaFrameSummary .dummyvar {
+    margin: 0.5em;
+    /*color: #b2a032;*/
+    color: orange;
+}
+.caps-content .FormulaFrameSummary .axiom {
+    margin: 0.5em;
+    /*color: #b2a032;*/
+    color: orange;
+}
+
+.context {
+    background-color: rgb(192, 210, 255);
+    .roundedcorner(0.25em);
+    margin-top: 0.5em;
+}
+
+.posummary {
+    background-color: rgb(192, 210, 255);
+    .roundedcorner(0.25em);
+    margin-top: 0.5em;
+    padding: 0.5em;
+}
+
+.bracket_scroll_mode {
+    border-left: solid;
+    border-right: solid;
+    border-radius: 0.5em;
+    padding: 5px;
+    border-width:0.1em;
+    margin-left: 0.25em;
+	.flex_center_wrap;	/*Initially wrap was not there*/
+}
+
+.Term, .Term div {
+	.flex_center_wrap
+}
+
+.cmd > .CompositionAnn {
+	margin-left: 4em;
+}
+
+.AsgnDerivStep {
+    background-color: pink;
+    margin: 0.2em;
+    padding: 0.2em;
+    .smallshadow;
+    .fullwidth;
+}
+
+.asgnDerivation {
+    .smallshadow;
+    margin: 0.2em;
+    padding: 0.2em;
+    background-color: #bbb;
+    .fullwidth;
+}
+
+.CalcProofStep {
+	clear: both;
+	width: 100%;
+}
+
+.HBox {
+    border-top: solid;
+    border-left: solid;
+    margin: 0.1em;
+    padding:  0.2em;
+    margin-left: 1em;
+    padding-left: 0.5em;
+	.topleft_roundedcorner;
+    .bigshadow;
+    border-color: white;
+}
+
+.nodeObjDbg{
+    color: gray;
+    clear: both;
+    padding: 0.5em;
+}
+
+.spacediv {
+	.hpadding(0.25em);
+}
+.hint {
+    background-color: lightblue;
+    padding: 0.2em;
+    margin: 0.2em;
+	.smallshadow;
+    .fullwidth;
+    clear: both;
+}
+.hint, .hint div {
+	.flex_center_wrap;
+}
+
+.hint > .tacticRelation {
+	margin-right:0.5em;
+}
+
+.AsgnDerivStep > .tacticRelationSpace {
+	min-width: 1em;
+	clear:left;
+}
+
+
+
+/*LESS Library */
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.hpadding(@x) {
+    padding-left: @x;
+    padding-right: @x;
+}
+.hmargin(@x) {
+    margin-left: @x;
+    margin-right: @x;
+}
+
+.vpadding(@x) {
+    padding-top: @x;
+    padding-bottom: @x;
+}
+.vmargin(@x) {
+    margin-top: @x;
+    margin-bottom: @x;
+}
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.topleft_roundedcorner(@rad: 0.5em) {
+    border-top-left-radius: @rad;
+	-moz-border-top-left-radius: @rad;
+	-webkit-border-top-left-radius: @rad;
+}
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.roundedcorner(@rad: 0.5em) {
+    border-radius: @rad;
+	-moz-border-radius: @rad;
+	-webkit-border-radius: @rad;
+}
+.fullwidth {
+	width: 100%;
+}
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.smallshadow {
+    box-shadow: -2px -2px 2px #888888;
+}
+.bigshadow {
+	box-shadow: -6px -6px 3px #888888;
+}
+/* docs/ProgSynthWebAppDoc.html/#less_library */
+.flex_center_wrap {
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-flex-wrap: wrap;
+}
+
+.FormulaFrameSummary .axioms,
+.FormulaFrameSummary .axiom,
+.FormulaFrameSummary .dummyvars,
+.FormulaFrameSummary .relation {
+	clear:both
+}
+
+.FormulaFrameSummary .relation {
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+a.docLink {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+
+#applyTacticBtn,
+#editTacticBtn {
+	appearance:button;
+	-moz-appearance:button; /* Firefox */
+	-webkit-appearance:button; /* Safari and Chrome */
+	padding-right:0.5em;
+	padding-left:0.5em;
+	padding-top:0.3em;
+	padding-bottom:0.3em;
+    float: left;
+    margin-top: 1em;
+}
+
+.MetaVariableDiv {
+	clear: both;
+}
+
+.heading {
+	clear: both;
+	font-weight: bold;
+}
+
+.DerivedGuardedCommands {
+	clear: both;
+	font-weight: bold;
+	font-size:150%;
+}
+
+.StatusTable, .GrdCmdTable {
+	clear: both;
+}
+
+.ifDerivation, .HintAndHBox {
+	clear: both;
+}
+
+/*Hide debug stuff*/
+.ProgramAnn .id,
+.posummary,
+.nodeObjDbg,
+.pa_proofobligs,
+.caps-top,
+.statusbar {
+	display: none;
+}
+
+/*Assumed Pre Styles*/
+.FVAndAssumedPreInfo {
+	clear: both;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.FVAndAssumedPreInfo .Section {
+	margin-top: 0.2 em;
+	margin-bottom: 0.2 em;
+	clear: both;
+}
+
+.FVAndAssumedPreInfo .Section .field1 {
+	clear: left;
+	font-weight: bold;
+}
+
+.FVAndAssumedPreInfo .Section .field2 {
+	margin-left: 1em;
+
+
+}
+
+.FVAndAssumedPreInfo .Section .Header {
+	clear: both;
+	font-weight: bold;
+}
+
+.FVAndAssumedPreInfo .Section .List {
+	clear: both;
+	margin-left: 1em;
+}
+
+.ParentTactic, .ChildTactic {
+	background-color: lightblue;
+	/*border: 0.10em solid;*/
+	margin: 0.5em;
+	padding: 0.5em;
+	.roundedcorner(0.5em);
+	clear: both;
+	box-shadow: -3px -3px 1px #888888;
+}
+
+.AssumeProg {
+	.flex_center_wrap;
+}
+
+.ThisNode {
+	clear: both;
+}
+
+/*Hide the formulaframesummary for program nodes*/
+.ThisNode > .Frame > .FrameSummary > .FormulaFrameSummary {
+	display: none;
+}
+
+.ProgramAnnParentNode > .Frame > .FrameSummary > .FormulaFrameSummary {
+	display: none;
+}
+
+/*TODO: temporary change. Hide the parent node */
+.ProgramAnnParentNode {
+	display: none;
+}
+
+
+/*add right margin to immediate children*/
+.SepChildsBySpace > div {
+	margin-right: 0.5em;
+}
+
+/* Proof Status Information*/
+.PPSList {
+	border:0.1em solid;
+	border-color: red;
+	background-color: lightgreen;
+}
+
+.PPSList .pps {
+	margin: 0.5em;
+	padding: 0.5em;
+	clear: both;
+	border: 0.1em solid;
+    border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+}
+
+.PPSList .PO {
+	border:0.1em solid;
+	background-color: pink;
+}
+
+.PPSList .MultiProverStatus .finalStatus {
+	border: 0.1em solid;
+	clear: both;
+}
+
+.PPSList .MultiProverStatus .proversRetInfo {
+	clear:both;
+}
+
+/*MinimizableDiv css settings*/
+/*Essential*/
+.Minimizable .MaxContent {
+    position:relative;
+}
+.Minimizable .MinLink {
+    position:absolute;
+    right:0%;
+    top:0;
+    z-index:2;
+}
+/*
+.Minimizable .Hidden {
+	display:none;
+}
+*/
+/*Optional*/
+.Minimizable .MinContent {
+    border:solid;
+}
+.Minimizable .MaxLink {
+    margin-left: 1em;
+    background-color: yellow;
+}
+.Minimizable .MinLink {
+    background-color: yellow;
+    opacity:0.5;
+    border:solid;
+}
+/*////////////////////////////////////////*/
+/*MinimizableWithTitle css settings*/
+
+.MinimizableWithTitle .T {
+    border:solid;
+    border-color: #C0C0C0;
+    width: 100%;
+    display: block;
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+}
+
+.MinimizableWithTitle .C {
+    border:solid;
+    border-color: #C0C0C0;
+    clear:left;
+    width: 100%;
+}
+
+.MinimizableWithTitle > .T > .More {
+    float:right;
+    margin-left: 1em;
+}
+
+.MinimizableWithTitle > .T > .Less {
+    float:right;
+    margin-left: 1em;
+}
+
+.MinimizableWithTitle .Anchor {
+    text-decoration: underline;
+    cursor: pointer;
+    color:blue;
+}
+
+/*These seetings are required to establish initial state*/
+
+.MinimizableWithTitle.Open > .T > .More {
+    display:none;
+}
+
+.MinimizableWithTitle.Close > .T > .Less {
+    display:none;
+}
+
+.MinimizableWithTitle.Close > .C {
+    display:none;
+}
+
+.ServerData {
+	display: none;
+}
+
+.derivContainer {
+	clear:left;
+	margin: 1em;
+}
+
+.derivDiv {
+	clear:left;
+	padding-left:0.5em;
+	padding-right:0.5em;
+}
+
+/*zebra stripes*/
+.derivDiv:nth-of-type(even) {
+    background: #CCF2FF;
+}
+.derivDiv:nth-of-type(odd) {
+    background: #99E6FF;
+}
+
+.FakeLink {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/*Aligh UserInfo Menu to right of the menubar*/
+#psMenuBar .UserInfo {
+	float: right;
+}
+
+.ApplyTacticError {
+	clear: left;
+	color: red;
+}
+
+.CapsKeyword {
+	color: blue;
+	font-weight:110%;
+ 	font-family: 'Lucida Console', 'Bitstream Vera Sans Mono', 'Courier New', Monaco, Courier, monospace;
+ 	margin-right:0.5em;
+}
+
+.guard-arrow {
+	.flex_center_wrap;
+}
+
+.ui-menu { width: 150px; }
+
+.tacticName {
+	font-weight: bold;
+}
+
+.paramTable {
+	clear: left;
+}
+
+/*Operator spacing*/
+.opr.bang {
+	color:chocolate;
+	font-weight:bold;
+}
+.opr.ampamp {
+	padding-left: 0.4em;
+	padding-right: 0.4em;
+	color:chocolate;
+	font-weight:bold;
+}
+.opr.pipepipe {
+	padding-left: 0.6em;
+	padding-right: 0.6em;
+	color:chocolate;
+	font-weight:bold;
+}
+.opr.impl {
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	color:chocolate;
+	font-weight:bold;
+}
+.opr.rimpl {
+	padding-left: 0.8em;
+	padding-right: 0.8em;
+	color:chocolate;
+	font-weight:bold;
+}
+.opr.equiv {
+	padding-left: 1em;
+	padding-right: 1em;
+	color:chocolate;
+	font-weight:bold;
+}
+
+
+
+.GrdsCompleteError {
+	border: 0.2em solid #FF0000;	
+}
+
+.TupleSep {
+	min-width: 1em;
+	min-height: 0.5em;
+}
+
+
+/* Login page */
+#loginpage .column {
+    max-width: 450px;
+}
+
+#loginpage .ui.form .error.message, 
+#loginpage .ui.form .success.message, 
+#loginpage .ui.form .warning.message {
+    display:inherit;
+}
+/* Pervent the FocusInner shadow from overflowing */
+#ProgramAnnContainer {
+    overflow:hidden;
+    border-radius:1em;
+}
+
+.FocusInner {
+   box-shadow: 5px 5px 0px 5000px rgba(0,0,0,0.4);
+   z-index:9000;   
+   position:relative;
+   margin: 0.5em;
+   border-radius: 1em;
+   clear: left;
+}
+
+.FocusInner > div.ProgramAnn {
+	margin: 0em;
+	box-shadow: none;
+}
+
+/* Hide focusid from frame summary */
+div.FocusID {
+	display:none;
+}
+
+

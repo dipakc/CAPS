@@ -1,0 +1,4 @@
+<plugin>
+  <name>ProgSynth</name>
+  <classname>progsynth.plugin.ProgSynthPlugin</classname>
+</plugin>

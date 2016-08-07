@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<!--YUI CSS-->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/logger/assets/logger.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.9.0/build/yuitest/assets/testlogger.css">
+ 
+<script type="text/javascript" src='javascripts/require.js'></script>
+<script type="text/javascript" src='javascripts/require.config.js'></script>
+<script>
+	console.log("In main html after require.config.js");
+	require(["tests/yui_test_main"]);	
+</script>
+
+</head>
+
+<body>
+	<div>welcome</div>
+</body>
+</html>
